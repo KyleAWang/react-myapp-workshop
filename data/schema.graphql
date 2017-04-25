@@ -1,0 +1,53 @@
+# order items
+type Item {
+  _id: ID!
+  name: String
+  price: Float
+  quantity: Int
+}
+
+input ItemInput {
+  itemId: Int
+  name: String
+  price: Float
+  quantity: Int
+  url: String
+}
+
+type Mutation {
+  orderMutation(input: OrderMutationInput!): OrderMutationPayload
+}
+
+# an order
+type Order {
+  _id: ID!
+  items: [Item]
+  subtotal: Float
+  orderId: String
+}
+
+input OrderMutationInput {
+  orderId: String!
+  subtotal: Float!
+  items: [ItemInput]
+  clientMutationId: String
+}
+
+type OrderMutationPayload {
+  order: Order
+  orders: Orders
+  clientMutationId: String
+}
+
+# a list of orders 
+type Orders {
+  # The ID of an object
+  id: ID!
+
+  # orders
+  orders: [Order]
+}
+
+type Query {
+  orders: [Order]
+}
