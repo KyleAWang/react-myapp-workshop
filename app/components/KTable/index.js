@@ -8,18 +8,22 @@ import Shipping from 'components/Shipping';
 import { editOrder } from 'containers/OrderDetail/actions';
 
 class KTable extends React.Component{
-    constructor(){
-        super();
-        this.showModal = true;
+
+
+    constructor(props){
+        super(props);
+        this.state = {showModal: false};
+        this.close = this.close.bind(this);
+        this.open = this.open.bind(this);
     }
     close(){
-        console.log('close');
-        this.showModal = false;
+        this.setState({showModal: false});
+        console.log('close;', this.state.showModal);
     }
 
     open(){
-        console.log('open', this.showModal);
-        this.showModal = true;
+        this.setState({showModal: true});
+        console.log(this.state.showModal);
     }
 
     render(){
@@ -83,7 +87,7 @@ class KTable extends React.Component{
                         {itemContent}
                     </tbody>
                 </Table>
-                <Modal show={this.showModal} onHide={this.close}>
+                <Modal show={this.state.showModal} onHide={this.close}>
                     <Modal.Header closeButton>
                         <Modal.Title>Modal heading</Modal.Title>
                     </Modal.Header>
