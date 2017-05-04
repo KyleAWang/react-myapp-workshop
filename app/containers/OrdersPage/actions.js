@@ -2,6 +2,8 @@ import {
     LOAD_ORDERS,
     LOAD_ORDERS_SUCCESS,
     LOAD_ORDERS_ERROR,
+    OPEN_MODAL,
+    CLOS_MODAL,
 } from './constants';
 
 export function loadOrders() {

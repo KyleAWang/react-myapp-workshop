@@ -7,6 +7,12 @@ const makeSelectOreders = () => createSelector(
     (ordersState) => ordersState.get('orders'),
 );
 
+const makeSelectItem = () => createSelector(
+    selectOrders,
+    (selectOrders) => selectOrders.get('item'),
+);
+
+
 export {
     selectOrders,
     makeSelectOreders,

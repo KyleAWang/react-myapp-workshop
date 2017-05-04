@@ -52,6 +52,6 @@ module.exports = new GraphQLObjectType({
         },
         shipping: {
             type: new GraphQLList(ShippingTypeQL),
-        }
+        },
     })
 });

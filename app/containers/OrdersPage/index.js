@@ -6,7 +6,7 @@ import { createStructuredSelector } from 'reselect';
 import { loadOrders } from './actions';
 import { makeSelectOreders } from './selectors';
 import { makeSelectError, makeSelectLoading } from 'containers/App/selectors';
-import KTable from 'components/KTable';
+import KTable from 'containers/KTable';
 
 
 
@@ -21,7 +21,7 @@ export class OrdersPage extends React.Component{
         let content = (<div></div>);
 
         if (orders){
-            content = (<KTable items={orders}/>);
+            content = (<KTable items={orders} />);
         }else{
             content = (<div>Loading...</div>);
         }

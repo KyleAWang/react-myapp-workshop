@@ -4,6 +4,7 @@ import { combineReducers } from 'redux-immutable';
 import { LOCATION_CHANGE } from 'react-router-redux';
 import globalReducer from 'containers/App/reducer';
 import ordersReducer from 'containers/OrdersPage/reducer';
+import orderReducer from 'containers/OrderDetail/reducer';
 
 
 // Initial routing state
@@ -29,6 +30,7 @@ export default function createReducer(asyncReducers) {
         global: globalReducer,
         route: routeReducer,
         orders: ordersReducer,
+        order: orderReducer,
         ...asyncReducers,
     });
 }

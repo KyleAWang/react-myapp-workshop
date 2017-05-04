@@ -1,6 +1,5 @@
-export const LOAD_ORDER = 'workshop/orderDetail/LOAD_ORDER';
-export const LOAD_ORDER_SUCCESS = 'workshop/orderDetail/LOAD_ORDER_SUCCESS';
-export const LOAD_ORDER_ERROR = 'workshop/orderDetail/LOAD_ORDER_ERROR';
-export const EDIT_ORDER = 'workshop/orderDetail/EDIT_ORDER';
-export const EDIT_ORDER_SUCCESS = 'workshop/orderDetail/EDIT_ORDER_SUCCESS';
-export const EDIT_ORDER_ERROR = 'workshop/orderDetail/EDIT_ORDER_ERROR';
+
+export const LOAD_ORDER = 'workshop/Orders/LOAD_ORDER';
+export const CLOSE_ORDER = 'workshop/Orders/CLOSE_ORDER';
+export const UPDATE_SUTOTAL = 'workshop/Orders/UPDATE_SUTOTAL';
+export const UPDATE_ORDER = 'workshop/Orders/UPDATE_ORDER';
