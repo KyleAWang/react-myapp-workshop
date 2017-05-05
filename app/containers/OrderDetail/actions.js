@@ -31,3 +31,16 @@ export function updateOrder(order) {
         order,
     }
 }
+
+export function updateSuccess() {
+    return{
+        type: UPDATE_ORDER_SUCCESS,
+    }
+}
+
+export function responseError(err) {
+    return {
+        type: RESPONSE_ERROR,
+        err,
+    }
+}

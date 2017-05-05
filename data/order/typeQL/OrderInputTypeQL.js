@@ -8,20 +8,21 @@ const {
     GraphQLID,
     GraphQLFloat,
     GraphQL,
+    GraphQLInputObjectType,
 }  = require('graphql');
 
-const ItemTypeQL = require('./ItemTypeQL');
-const AddressTypeQL = require('./AddressTypeQL');
-const ShippingTypeQL = require('./ShippingTypeQL');
+const ShippingInputType = require('./ShippingInputTypeQL');
+const AddressInputType = require('./AddressInputTypeQL');
+const ItemInputType = require('./ItemInputTypeQL');
 
 const CustomGraphQLDateType = require('graphql-custom-datetype');
 
-module.exports = new GraphQLObjectType({
-    name: 'Order',
+module.exports = new GraphQLInputObjectType({
+    name: 'OrderInput',
     description: 'An order',
     fields: () => ({
         _id: {
-            type: new GraphQLNonNull(GraphQLID)
+            type: GraphQLID
         },
         totalCost: {
             type: new GraphQLNonNull(GraphQLFloat)
@@ -45,13 +46,13 @@ module.exports = new GraphQLObjectType({
             type: GraphQLString
         },
         items: {
-            type: new GraphQLList(ItemTypeQL),
+            type: new GraphQLList(ItemInputType),
         },
         address: {
-            type: AddressTypeQL,
+            type: AddressInputType,
         },
         shipping: {
-            type: new GraphQLList(ShippingTypeQL),
+            type: new GraphQLList(ShippingInputType),
         },
     })
 });

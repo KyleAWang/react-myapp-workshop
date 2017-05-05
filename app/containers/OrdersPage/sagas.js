@@ -1,11 +1,12 @@
-import { call, take, takeLatest, cancel, put } from 'redux-saga/effects';
+import { call, take, takeLatest, cancel, put, select } from 'redux-saga/effects';
 import { LOCATION_CHANGE } from 'react-router-redux';
 import request from 'utils/request';
-import { LOAD_ORDERS } from './constants';
-import { loadOrdersSuccess, loadOrdersError } from './actions';
+import { LOAD_ORDERS, UPDATE_ORDER } from './constants';
+import { loadOrdersSuccess, loadOrdersError, updateSuccess, responseError } from './actions';
+import { makeSelectOrder } from 'containers/OrderDetail/selectors';
 
 export function* getOrders() {
-    const requestURL = 'http://localhost:3000/graphql?query={orders{orderId,created,subtotal,status,totalCost,totalRmbCost,items{name,url,price,quantity,subtotal},address{name,tel,zip,weight,address},shipping{no,url,status}}}';
+    const requestURL = 'http://localhost:3000/graphql?query={orders{_id,orderId,created,subtotal,status,totalCost,totalRmbCost,items{name,url,price,quantity,subtotal},address{name,tel,zip,weight,address},shipping{no,url,status}}}';
 
     try{
         const orders = yield call(request, requestURL);

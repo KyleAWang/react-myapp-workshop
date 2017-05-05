@@ -6,7 +6,7 @@ import { createStructuredSelector } from 'reselect';
 import { loadOrders } from './actions';
 import { makeSelectOreders } from './selectors';
 import { makeSelectError, makeSelectLoading } from 'containers/App/selectors';
-import KTable from 'containers/KTable';
+import KTable from './ktable';
 
 
 

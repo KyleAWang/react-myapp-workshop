@@ -5,7 +5,7 @@ const {
     GraphQLNonNull,
     GraphQLID,
     GraphQLFloat,
-    GraphQLInputObjectType
+    GraphQLInputObjectType,
 }  = require('graphql');
 
 module.exports = new GraphQLInputObjectType({

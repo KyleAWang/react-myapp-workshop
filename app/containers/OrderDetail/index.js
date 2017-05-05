@@ -229,7 +229,7 @@ class OrderDetail extends React.PureComponent{
                         <FieldGroup label='no'
                                     placeholder='no'
                                     type='text'
-                                    value={item.no}
+                                    value={item.no || ''}
                                     onChange={(evt) => this.changeShippingNo(index, evt)}
                         />
                     </Col>
@@ -237,7 +237,7 @@ class OrderDetail extends React.PureComponent{
                         <FieldGroup label='url'
                                     placeholder='url'
                                     type='text'
-                                    value={item.url}
+                                    value={item.url || ''}
                                     onChange={(evt) => this.changeShippingUrl(index, evt)}
                         />
                     </Col>
@@ -247,7 +247,7 @@ class OrderDetail extends React.PureComponent{
                             <FormControl
                                 componentClass="textarea"
                                 placeholder="textarea"
-                                value={item.items}
+                                value={item.items || ''}
                                 onChange={(evt) => this.changeShippingItems(index, evt)}
                             />
                         </FormGroup>
@@ -256,7 +256,7 @@ class OrderDetail extends React.PureComponent{
                         <FieldGroup label='status'
                                     placeholder='status'
                                     type='text'
-                                    value={item.status}
+                                    value={item.status || ''}
                                     onChange={(evt) => this.changeShippingStatus(index, evt)}
                         />
                     </Col>
@@ -272,7 +272,7 @@ class OrderDetail extends React.PureComponent{
                         <FieldGroup label='name'
                                     placeholder='name'
                                     type='text'
-                                    value={item.name}
+                                    value={item.name || ''}
                                     onChange={(evt) => this.changeItemName(index, evt)}
                         />
                     </Col>
@@ -280,7 +280,7 @@ class OrderDetail extends React.PureComponent{
                         <FieldGroup label='url'
                                     placeholder='url'
                                     type='text'
-                                    value={item.url}
+                                    value={item.url || ''}
                                     onChange={(evt) => this.changeItemUrl(index, evt)}
                         />
                     </Col>
@@ -288,7 +288,7 @@ class OrderDetail extends React.PureComponent{
                         <FieldGroup label='price'
                                     placeholder='price'
                                     type='text'
-                                    value={item.price}
+                                    value={item.price || ''}
                                     onChange={(evt) => this.changeItemPrice(index, evt)}
                         />
                     </Col>
@@ -296,7 +296,7 @@ class OrderDetail extends React.PureComponent{
                         <FieldGroup label='quantity'
                                     placeholder='quantity'
                                     type='text'
-                                    value={item.quantity}
+                                    value={item.quantity || ''}
                                     onChange={(evt) => this.changeItemQuantity(index, evt)}
                         />
                     </Col>
@@ -304,7 +304,7 @@ class OrderDetail extends React.PureComponent{
                         <FieldGroup label='subtotal'
                                     placeholder='subtotal'
                                     type='text'
-                                    value={item.subtotal}
+                                    value={item.subtotal || ''}
                                     onChange={(evt) => this.changeItemSubtotal(index, evt)}
                         />
                     </Col>
@@ -321,7 +321,7 @@ class OrderDetail extends React.PureComponent{
                                     type="text"
                                     placekholder="Name"
                                     label="Name"
-                                    value={order.address.name}
+                                    value={order.address.name || ''}
                                     onChange={this.changeAddressName}
                         />
                     </Col>
@@ -330,7 +330,7 @@ class OrderDetail extends React.PureComponent{
                                     type="text"
                                     placekholder="Tel"
                                     label="Tel"
-                                    value={order.address.tel}
+                                    value={order.address.tel || ''}
                                     onChange={this.changeAddressTel}
                         />
                     </Col>
@@ -339,7 +339,7 @@ class OrderDetail extends React.PureComponent{
                                     type="text"
                                     placekholder="Zip"
                                     label="Zip"
-                                    value={order.address.zip}
+                                    value={order.address.zip || ''}
                                     onChange={this.changeAddressZip}
                         />
                     </Col>
@@ -348,7 +348,7 @@ class OrderDetail extends React.PureComponent{
                                     type="text"
                                     placekholder="Weight"
                                     label="Weight"
-                                    value={order.address.weight}
+                                    value={order.address.weight || ''}
                                     onChange={this.changeAddressWeight}
                         />
                     </Col>
@@ -357,7 +357,7 @@ class OrderDetail extends React.PureComponent{
                                     type="text"
                                     placekholder="Address"
                                     label="Address"
-                                    value={order.address.address}
+                                    value={order.address.address || ''}
                                     onChange={this.changeAddressAddress}
                         />
                     </Col>
@@ -382,7 +382,7 @@ class OrderDetail extends React.PureComponent{
                                                     type="text"
                                                     placekholder="sub total"
                                                     label="Sub Total"
-                                                    value={order.subtotal}
+                                                    value={order.subtotal || ''}
                                                     onChange={this.changeSubtotal}
                                         />
                                     </Col>
@@ -412,7 +412,7 @@ class OrderDetail extends React.PureComponent{
                                                     type="text"
                                                     placekholder="Total Cost"
                                                     label="Total Cost"
-                                                    value={order.totalCost}
+                                                    value={order.totalCost || ''}
                                                     onChange={this.changeTotalCost}
                                         />
                                     </Col>
@@ -421,7 +421,7 @@ class OrderDetail extends React.PureComponent{
                                                     type="text"
                                                     placekholder="Total RMB Cost"
                                                     label="Total RMB Cost"
-                                                    value={order.totalRmbCost}
+                                                    value={order.totalRmbCost || ''}
                                                     onChange={this.changeTotalRmbCost}
                                         />
                                     </Col>
@@ -460,6 +460,7 @@ class OrderDetail extends React.PureComponent{
                         </PanelGroup>
                     </Modal.Body>
                     <Modal.Footer>
+                        <Button onClick={this.props.updateOrder}>Update</Button>
                         <Button onClick={this.props.closeOrder}>Close</Button>
                     </Modal.Footer>
                 </Modal>

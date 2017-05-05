@@ -32,7 +32,8 @@ const RootQuery = new GraphQLObjectType({
 const RootMutation = new GraphQLObjectType({
     name: 'Mutation',
     fields: () => ({
-        addOrder: OrderMutations.addOrder
+        addOrder: OrderMutations.addOrder,
+        updateOrder: OrderMutations.updateOrder,
     })
 });
 
