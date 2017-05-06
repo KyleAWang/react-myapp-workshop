@@ -13,22 +13,22 @@ const makeSelectItem = () => createSelector(
 );
 
 
-const selectOrder = (state) => state.get('order');
+// const selectOrder = (state) => state.get('order');
 
 const makeSelectOrder = () => createSelector(
-    selectOrder,
-    (orderState) =>  orderState.get('order'),
+    selectOrders,
+    (selectOrders) => selectOrders.get('order'),
 );
 
 const makeSelectShowModal = () => createSelector(
-    selectOrder,
-    (orderState) => orderState.get('showModal'),
+    selectOrders,
+    (selectOrders) => selectOrders.get('showModal'),
 );
 
 export {
     selectOrders,
     makeSelectOreders,
-    selectOrder,
+    // selectOrder,
     makeSelectShowModal,
     makeSelectOrder,
 };

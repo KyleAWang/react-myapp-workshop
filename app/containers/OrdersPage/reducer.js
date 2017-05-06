@@ -56,7 +56,6 @@ function ordersReducer(state = initialState, action) {
                 .set('showModal', true);
         case SUBMIT_UPDATE_FORM:
             return state
-                .set('order', action.order)
                 .set('showModal', true);
         case SUBMIT_UPDATE_FORM_SUCCESS:
             return state

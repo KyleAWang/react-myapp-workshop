@@ -74,9 +74,8 @@ export function responseError(err) {
     }
 }
 
-export function submitUpdateForm(order) {
+export function submitUpdateForm() {
     return {
         type: SUBMIT_UPDATE_FORM,
-        order,
     }
 }
