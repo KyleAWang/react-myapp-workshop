@@ -37,10 +37,10 @@ module.exports = new GraphQLInputObjectType({
             type: new GraphQLNonNull(GraphQLFloat)
         },
         updated: {
-            type: new GraphQLNonNull(CustomGraphQLDateType)
+            type: CustomGraphQLDateType
         },
         created: {
-            type: new GraphQLNonNull(CustomGraphQLDateType)
+            type: CustomGraphQLDateType
         },
         status: {
             type: GraphQLString

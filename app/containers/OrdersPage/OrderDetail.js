@@ -5,9 +5,10 @@ import { Table, Button, Modal, Popover, Tooltip, Panel, PanelGroup, FormGroup, F
 import { FormattedDate, FormattedTime, FormattedNumber } from 'react-intl';
 import DatePicker from 'react-bootstrap-date-picker';
 
-import { closeOrder, changeSubtotal, updateOrder } from './actions';
+import { closeOrder, updateOrder, submitUpdateForm } from './actions';
 import { makeSelectOrder, makeSelectShowModal } from './selectors';
 import FieldGroup  from 'components/FieldGroup';
+import { convertStringToNumber } from 'utils/convertHelper';
 // import ShippingTableItem from 'components/ShippingTableItem';
 // import OrderTableItem from 'components/OrderTableItem';
 // import AddressTableItem from 'components/AddressTableItem';
@@ -43,15 +44,15 @@ class OrderDetail extends React.PureComponent{
             ...this.props.order,
             created: date,
         };
-        this.props.updateOrder(_order);
+        this.props.onUpdateOrder(_order);
     }
 
     changeSubtotal(evt){
         const _order = {
             ...this.props.order,
-            subtotal: evt.target.value,
+            subtotal: convertStringToNumber(evt.target.value),
         };
-        this.props.updateOrder(_order);
+        this.props.onUpdateOrder(_order);
     }
 
     changeStatus(evt){
@@ -59,23 +60,23 @@ class OrderDetail extends React.PureComponent{
             ...this.props.order,
             status: evt.target.value,
         };
-        this.props.updateOrder(_order);
+        this.props.onUpdateOrder(_order);
     }
 
     changeTotalCost(evt){
         const _order = {
             ...this.props.order,
-            totalCost: evt.target.value,
+            totalCost: convertStringToNumber(evt.target.value),
         };
-        this.props.updateOrder(_order);
+        this.props.onUpdateOrder(_order);
     }
 
     changeTotalRmbCost(evt){
         const _order = {
             ...this.props.order,
-            totalRmbCost: evt.target.value,
+            totalRmbCost: convertStringToNumber(evt.target.value),
         };
-        this.props.updateOrder(_order);
+        this.props.onUpdateOrder(_order);
     }
 
     changeShippingNo(index, evt){
@@ -85,7 +86,7 @@ class OrderDetail extends React.PureComponent{
             ...this.props.order,
             shipping: _newShipping,
         };
-        this.props.updateOrder(_order);
+        this.props.onUpdateOrder(_order);
     }
 
     changeShippingUrl(index, evt){
@@ -95,7 +96,7 @@ class OrderDetail extends React.PureComponent{
             ...this.props.order,
             shipping: _newShipping,
         };
-        this.props.updateOrder(_order);
+        this.props.onUpdateOrder(_order);
     }
 
     changeShippingItems(index, evt){
@@ -105,7 +106,7 @@ class OrderDetail extends React.PureComponent{
             ...this.props.order,
             shipping: _newShipping,
         };
-        this.props.updateOrder(_order);
+        this.props.onUpdateOrder(_order);
     }
 
     changeShippingStatus(index, evt){
@@ -115,7 +116,7 @@ class OrderDetail extends React.PureComponent{
             ...this.props.order,
             shipping: _newShipping,
         };
-        this.props.updateOrder(_order);
+        this.props.onUpdateOrder(_order);
     }
 
     changeItemName(index, evt){
@@ -125,7 +126,7 @@ class OrderDetail extends React.PureComponent{
             ...this.props.order,
             items: _newItems,
         };
-        this.props.updateOrder(_order);
+        this.props.onUpdateOrder(_order);
     }
 
     changeItemPrice(index, evt){
@@ -135,7 +136,7 @@ class OrderDetail extends React.PureComponent{
             ...this.props.order,
             items: _newItems,
         };
-        this.props.updateOrder(_order);
+        this.props.onUpdateOrder(_order);
     }
 
     changeItemUrl(index, evt){
@@ -145,7 +146,7 @@ class OrderDetail extends React.PureComponent{
             ...this.props.order,
             items: _newItems,
         };
-        this.props.updateOrder(_order);
+        this.props.onUpdateOrder(_order);
     }
 
     changeItemQuantity(index, evt){
@@ -155,17 +156,17 @@ class OrderDetail extends React.PureComponent{
             ...this.props.order,
             items: _newItems,
         };
-        this.props.updateOrder(_order);
+        this.props.onUpdateOrder(_order);
     }
 
     changeItemSubtotal(index, evt){
         const _newItems = this.props.order.items;
-        _newItems[index].subtotal = evt.target.value;
+        _newItems[index].subtotal = convertStringToNumber(evt.target.value);
         const _order = {
             ...this.props.order,
             items: _newItems,
         };
-        this.props.updateOrder(_order);
+        this.props.onUpdateOrder(_order);
     }
 
     changeAddressAddress(evt){
@@ -175,7 +176,7 @@ class OrderDetail extends React.PureComponent{
                 address: evt.target.value,
             },
         };
-        this.props.updateOrder(_order);
+        this.props.onUpdateOrder(_order);
     }
 
     changeAddressName(evt){
@@ -185,7 +186,7 @@ class OrderDetail extends React.PureComponent{
                 name: evt.target.value,
             },
         };
-        this.props.updateOrder(_order);
+        this.props.onUpdateOrder(_order);
     }
 
     changeAddressZip(evt){
@@ -195,7 +196,7 @@ class OrderDetail extends React.PureComponent{
                 zip: evt.target.value,
             },
         };
-        this.props.updateOrder(_order);
+        this.props.onUpdateOrder(_order);
     }
 
     changeAddressTel(evt){
@@ -205,7 +206,7 @@ class OrderDetail extends React.PureComponent{
                 tel: evt.target.value,
             },
         };
-        this.props.updateOrder(_order);
+        this.props.onUpdateOrder(_order);
     }
 
     changeAddressWeight(evt){
@@ -215,7 +216,7 @@ class OrderDetail extends React.PureComponent{
                 weight: evt.target.value,
             },
         };
-        this.props.updateOrder(_order);
+        this.props.onUpdateOrder(_order);
     }
 
     render(){
@@ -369,7 +370,7 @@ class OrderDetail extends React.PureComponent{
         let content = <div></div>
         if (order){
             content = (
-                <Modal show={showModal} onHide={this.props.closeOrder} bsSize="lg">
+                <Modal show={showModal} onHide={this.props.onCloseOrder} bsSize="lg">
                     <Modal.Header closeButton>
                         <Modal.Title>Order Id: {order.orderId}</Modal.Title>
                     </Modal.Header>
@@ -379,7 +380,7 @@ class OrderDetail extends React.PureComponent{
                                 <Row className="clearfix">
                                     <Col lg={4} md={6} xs={12}>
                                         <FieldGroup id="formControlsText"
-                                                    type="text"
+                                                    type="number"
                                                     placekholder="sub total"
                                                     label="Sub Total"
                                                     value={order.subtotal || ''}
@@ -409,7 +410,7 @@ class OrderDetail extends React.PureComponent{
                                 <Row className="clearfix">
                                     <Col lg={4} md={6} xs={12}>
                                         <FieldGroup id="formControlsText"
-                                                    type="text"
+                                                    type="number"
                                                     placekholder="Total Cost"
                                                     label="Total Cost"
                                                     value={order.totalCost || ''}
@@ -418,7 +419,7 @@ class OrderDetail extends React.PureComponent{
                                     </Col>
                                     <Col lg={4} md={6} xs={12}>
                                         <FieldGroup id="formControlsText"
-                                                    type="text"
+                                                    type="number"
                                                     placekholder="Total RMB Cost"
                                                     label="Total RMB Cost"
                                                     value={order.totalRmbCost || ''}
@@ -460,8 +461,8 @@ class OrderDetail extends React.PureComponent{
                         </PanelGroup>
                     </Modal.Body>
                     <Modal.Footer>
-                        <Button onClick={this.props.updateOrder}>Update</Button>
-                        <Button onClick={this.props.closeOrder}>Close</Button>
+                        <Button onClick={this.props.onSubmitUpdateForm}>Update</Button>
+                        <Button onClick={this.props.onCloseOrder}>Close</Button>
                     </Modal.Footer>
                 </Modal>
             );
@@ -506,9 +507,9 @@ OrderDetail.propTypes = {
 
 export function mapDispatchToProps(dispatch, ownProps) {
     return {
-        closeOrder: () => dispatch(closeOrder()),
-        changeSubtotal: (evt) => dispatch(changeSubtotal(evt.target.value)),
-        updateOrder: (order) => dispatch(updateOrder(order)),
+        onCloseOrder: () => dispatch(closeOrder()),
+        onUpdateOrder: (order) => dispatch(updateOrder(order)),
+        onSubmitUpdateForm: () => dispatch(submitUpdateForm()),
     }
 }
 

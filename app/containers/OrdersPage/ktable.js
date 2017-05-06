@@ -7,9 +7,9 @@ import { createStructuredSelector } from 'reselect';
 import Address from 'components/Address';
 import OrderItems from 'components/OrderItems';
 import Shipping from 'components/Shipping';
-import OrderDetail from 'containers/OrderDetail';
-import { loadOrder } from 'containers/OrderDetail/actions';
-import { makeSelectOrder, makeSelectShowModal } from 'containers/OrderDetail/selectors';
+import OrderDetail from './OrderDetail';
+import { loadOrder } from './actions';
+import { makeSelectOrder, makeSelectShowModal } from './selectors';
 
 class KTable extends React.Component{
     render(){
