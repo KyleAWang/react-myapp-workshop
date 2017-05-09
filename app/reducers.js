@@ -24,11 +24,12 @@ function routeReducer(state = routeInitialState, action) {
     }
 }
 
-export default function createReducer(asyncReducers) {
+export default function createReducer(asyncReducers, apolloClient) {
     return combineReducers({
         global: globalReducer,
         route: routeReducer,
         orders: ordersReducer,
+        apollo: apolloClient.reducer(),
         ...asyncReducers,
     });
 }

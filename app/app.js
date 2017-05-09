@@ -9,6 +9,7 @@ import FontFaceObserver from 'fontfaceobserver';
 import { useScroll } from 'react-router-scroll';
 import Bootstrap from 'bootstrap/dist/css/bootstrap.css';
 import { IntlProvider } from 'react-intl';
+import { ApolloClient, ApolloProvider } from 'react-apollo';
 
 import 'sanitize.css/sanitize.css';
 import App from 'containers/App';
@@ -24,8 +25,10 @@ import configureStore from './store';
 import './global-styles';
 
 import createRoutes from './routes';
+import apolloClient from './apolloClient';
 
 const openSansObserver = new FontFaceObserver('Open Sans', {});
+
 
 openSansObserver.load().then(() => {
     document.body.classList.add('fontLoaded');
@@ -34,7 +37,7 @@ openSansObserver.load().then(() => {
 });
 
 const initialState = {};
-const store = configureStore(initialState, browserHistory);
+const store = configureStore(initialState, browserHistory, apolloClient);
 
 const history = syncHistoryWithStore(browserHistory, store, {
     selectLocationState: makeSelectLocationState(),
@@ -42,11 +45,11 @@ const history = syncHistoryWithStore(browserHistory, store, {
 
 const rootRoute = {
     component: App,
-    childRoutes: createRoutes(store),
+    childRoutes: createRoutes(store, apolloClient),
 };
 const render = () => {
     ReactDOM.render(
-        <Provider store={store}>
+        <ApolloProvider store={store} client={apolloClient}>
             <IntlProvider locale="en">
                 <Router
                     history={history}
@@ -58,7 +61,7 @@ const render = () => {
                     }
                 />
             </IntlProvider>
-        </Provider>,
+        </ApolloProvider>,
         document.getElementById('app')
     );
 };

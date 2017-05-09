@@ -6,10 +6,11 @@ import createReducer from './reducers';
 
 const sagaMiddleware = createSagaMiddleware();
 
-export default function configureStore(initialState = {}, history) {
+export default function configureStore(initialState = {}, history, apolloClient) {
     const middlewares = [
         sagaMiddleware,
         routerMiddleware(history),
+        apolloClient.middleware(),
     ];
 
     const enhancers = [
@@ -23,7 +24,7 @@ export default function configureStore(initialState = {}, history) {
             window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ : compose;
 
     const store = createStore(
-        createReducer(),
+        createReducer(null, apolloClient),
         fromJS(initialState),
         composeEnhancers(...enhancers),
     );

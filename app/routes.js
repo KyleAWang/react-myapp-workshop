@@ -9,8 +9,8 @@ const loadModule = (cb) => (componentModule) => {
     cb(null, componentModule.default);
 };
 
-export default function createRoutes(store) {
-    const { injectReducer, injectSagas } = getAsyncInjectors(store);
+export default function createRoutes(store, apolloClient) {
+    const { injectReducer, injectSagas } = getAsyncInjectors(store, apolloClient);
 
     return [
         {
@@ -51,6 +51,23 @@ export default function createRoutes(store) {
                     injectReducer('orders', reducer.default);
                     injectSagas(sagas.default);
 
+                    renderRoute(component);
+                });
+
+                importModules.catch(errorLoading);
+            },
+        },
+        {
+            path: '/ordersap',
+            name: 'ordersap',
+            getComponent(nextState, cb){
+                const importModules = Promise.all([
+                import('containers/OrdersApollo'),
+            ]);
+
+                const renderRoute = loadModule(cb);
+
+                importModules.then(([component]) => {
                     renderRoute(component);
                 });
 

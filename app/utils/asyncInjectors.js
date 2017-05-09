@@ -26,7 +26,7 @@ export function checkStore(store) {
 /**
  * Inject an asynchronously loaded reducer
  */
-export function injectAsyncReducer(store, isValid) {
+export function injectAsyncReducer(store, isValid, apolloClient) {
     return function injectReducer(name, asyncReducer) {
         if (!isValid) checkStore(store);
 
@@ -38,7 +38,7 @@ export function injectAsyncReducer(store, isValid) {
         if (Reflect.has(store.asyncReducers, name)) return;
 
         store.asyncReducers[name] = asyncReducer; // eslint-disable-line no-param-reassign
-        store.replaceReducer(createReducer(store.asyncReducers));
+        store.replaceReducer(createReducer(store.asyncReducers, apolloClient));
     };
 }
 
@@ -66,11 +66,11 @@ export function injectAsyncSagas(store, isValid) {
 /**
  * Helper for creating injectors
  */
-export function getAsyncInjectors(store) {
+export function getAsyncInjectors(store, apolloClient) {
     checkStore(store);
 
     return {
-        injectReducer: injectAsyncReducer(store, true),
+        injectReducer: injectAsyncReducer(store, true, apolloClient),
         injectSagas: injectAsyncSagas(store, true),
     };
 }
