@@ -4,14 +4,15 @@ import { createStructuredSelector } from 'reselect';
 import { Table, Button, Modal, Popover, Tooltip, Panel, PanelGroup, FormGroup, FormControl, ControlLabel, Row, Col, HelpBlock } from 'react-bootstrap';
 import { FormattedDate, FormattedTime, FormattedNumber } from 'react-intl';
 import DatePicker from 'react-bootstrap-date-picker';
+import { gql, graphql } from 'react-apollo';
 
-import { closeOrder, updateOrder, submitUpdateForm } from './actions';
-import { makeSelectOrder, makeSelectShowModal } from './selectors';
+import { closeOrder, updateOrder, submitUpdateForm } from 'containers/OrdersPage/actions';
+import { makeSelectOrder, makeSelectShowModal } from 'containers/OrdersPage/selectors';
 import FieldGroup  from 'components/FieldGroup';
 import { convertStringToNumber } from 'utils/convertHelper';
-// import ShippingTableItem from 'components/ShippingTableItem';
-// import OrderTableItem from 'components/OrderTableItem';
-// import AddressTableItem from 'components/AddressTableItem';
+import EDIT_ORDER from 'containers/graphql/EditOrder.graphql';
+import ORDER_FRAGMENT from 'containers/graphql/OrderFragment.graphql'
+import { filter } from 'graphql-anywhere';
 
 
 class OrderDetail extends React.PureComponent{
@@ -37,14 +38,17 @@ class OrderDetail extends React.PureComponent{
         this.changeAddressTel = this.changeAddressTel.bind(this);
         this.changeAddressWeight = this.changeAddressWeight.bind(this);
         this.changeAddressZip = this.changeAddressZip.bind(this);
+        this.submitForm = this.submitForm.bind(this);
     }
 
     changeCreatedDate(date){
-        const _order = {
-            ...this.props.order,
-            created: date,
-        };
-        this.props.onUpdateOrder(_order);
+        if (date){
+            const _order = {
+                ...this.props.order,
+                created: date,
+            };
+            this.props.onUpdateOrder(_order);
+        }
     }
 
     changeSubtotal(evt){
@@ -219,6 +223,17 @@ class OrderDetail extends React.PureComponent{
         this.props.onUpdateOrder(_order);
     }
 
+    submitForm(event){
+        event.preventDefault();
+
+        const { editOrder, order, onCloseOrder } = this.props;
+
+        return editOrder(filter(ORDER_FRAGMENT, order)).then((res) => {
+           console.log(res);
+           onCloseOrder();
+        })
+    }
+
     render(){
         const { order, showModal } = this.props;
 
@@ -374,75 +389,77 @@ class OrderDetail extends React.PureComponent{
                     <Modal.Header closeButton>
                         <Modal.Title>Order Id: {order.orderId}</Modal.Title>
                     </Modal.Header>
-                    <Modal.Body>
-                        <PanelGroup defaultActiveKey="1" accordion>
-                            <Panel header="General" eventKey="1" expanded={true}>
-                                <Row className="clearfix">
-                                    <Col lg={4} md={6} xs={12}>
-                                        <FieldGroup id="formControlsText"
-                                                    type="number"
-                                                    placekholder="sub total"
-                                                    label="Sub Total"
-                                                    value={order.subtotal || ''}
-                                                    onChange={this.changeSubtotal}
-                                        />
-                                    </Col>
-                                    <Col lg={4} md={6} xs={12}>
-                                        <FormGroup controlId="formControlsText">
-                                            <ControlLabel>Created</ControlLabel>
-                                            <DatePicker id="example-datepicker" value={order.created}  onChange={this.changeCreatedDate}/>
-                                        </FormGroup>
-                                    </Col>
-                                    <Col lg={4} md={6} xs={12}>
-                                        <FormGroup controlId="formControlsSelect">
-                                            <ControlLabel>Status</ControlLabel>
-                                            <FormControl componentClass="select" placeholder="Status" value={order.status || ''} onChange={this.changeStatus}>
-                                                <option value="">--Choose one--</option>
-                                                <option value="Submitted">Submitted</option>
-                                                <option value="Delivery">Delivery</option>
-                                                <option value="Customers">Customers</option>
-                                                <option value="DeliveryL">DeliveryL</option>
-                                                <option value="Signed">Signed</option>
-                                            </FormControl>
-                                        </FormGroup>
-                                    </Col>
-                                </Row>
-                                <Row className="clearfix">
-                                    <Col lg={4} md={6} xs={12}>
-                                        <FieldGroup id="formControlsText"
-                                                    type="number"
-                                                    placekholder="Total Cost"
-                                                    label="Total Cost"
-                                                    value={order.totalCost || ''}
-                                                    onChange={this.changeTotalCost}
-                                        />
-                                    </Col>
-                                    <Col lg={4} md={6} xs={12}>
-                                        <FieldGroup id="formControlsText"
-                                                    type="number"
-                                                    placekholder="Total RMB Cost"
-                                                    label="Total RMB Cost"
-                                                    value={order.totalRmbCost || ''}
-                                                    onChange={this.changeTotalRmbCost}
-                                        />
-                                    </Col>
-                                </Row>
-                            </Panel>
-                            <Panel header="Shipping" eventKey="2">
-                                {shippingContent}
-                            </Panel>
-                            <Panel header="Order Item" eventKey="3">
-                                {orderItemContent}
-                            </Panel>
-                            <Panel header="Address" eventKey="4">
-                                {addressItemContent}
-                            </Panel>
-                        </PanelGroup>
-                    </Modal.Body>
-                    <Modal.Footer>
-                        <Button onClick={this.props.onSubmitUpdateForm}>Update</Button>
-                        <Button onClick={this.props.onCloseOrder}>Close</Button>
-                    </Modal.Footer>
+                    <form onSubmit={this.submitForm}>
+                        <Modal.Body>
+                            <PanelGroup defaultActiveKey="1" accordion>
+                                <Panel header="General" eventKey="1" expanded={true}>
+                                    <Row className="clearfix">
+                                        <Col lg={4} md={6} xs={12}>
+                                            <FieldGroup id="formControlsText"
+                                                        type="number"
+                                                        placekholder="sub total"
+                                                        label="Sub Total"
+                                                        value={order.subtotal || ''}
+                                                        onChange={this.changeSubtotal}
+                                            />
+                                        </Col>
+                                        <Col lg={4} md={6} xs={12}>
+                                            <FormGroup controlId="formControlsText">
+                                                <ControlLabel>Created</ControlLabel>
+                                                <DatePicker id="example-datepicker" value={order.created}  onChange={this.changeCreatedDate}/>
+                                            </FormGroup>
+                                        </Col>
+                                        <Col lg={4} md={6} xs={12}>
+                                            <FormGroup controlId="formControlsSelect">
+                                                <ControlLabel>Status</ControlLabel>
+                                                <FormControl componentClass="select" placeholder="Status" value={order.status || ''} onChange={this.changeStatus}>
+                                                    <option value="">--Choose one--</option>
+                                                    <option value="Submitted">Submitted</option>
+                                                    <option value="Delivery">Delivery</option>
+                                                    <option value="Customers">Customers</option>
+                                                    <option value="DeliveryL">DeliveryL</option>
+                                                    <option value="Signed">Signed</option>
+                                                </FormControl>
+                                            </FormGroup>
+                                        </Col>
+                                    </Row>
+                                    <Row className="clearfix">
+                                        <Col lg={4} md={6} xs={12}>
+                                            <FieldGroup id="formControlsText"
+                                                        type="number"
+                                                        placekholder="Total Cost"
+                                                        label="Total Cost"
+                                                        value={order.totalCost || ''}
+                                                        onChange={this.changeTotalCost}
+                                            />
+                                        </Col>
+                                        <Col lg={4} md={6} xs={12}>
+                                            <FieldGroup id="formControlsText"
+                                                        type="number"
+                                                        placekholder="Total RMB Cost"
+                                                        label="Total RMB Cost"
+                                                        value={order.totalRmbCost || ''}
+                                                        onChange={this.changeTotalRmbCost}
+                                            />
+                                        </Col>
+                                    </Row>
+                                </Panel>
+                                <Panel header="Shipping" eventKey="2">
+                                    {shippingContent}
+                                </Panel>
+                                <Panel header="Order Item" eventKey="3">
+                                    {orderItemContent}
+                                </Panel>
+                                <Panel header="Address" eventKey="4">
+                                    {addressItemContent}
+                                </Panel>
+                            </PanelGroup>
+                        </Modal.Body>
+                        <Modal.Footer>
+                            <Button type="submit">Update</Button>
+                            <Button onClick={this.props.onCloseOrder}>Close</Button>
+                        </Modal.Footer>
+                    </form>
                 </Modal>
             );
 
@@ -497,4 +514,14 @@ const mapStateToProps = createStructuredSelector({
     showModal: makeSelectShowModal(),
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(OrderDetail);
+const withEditOrder = graphql(EDIT_ORDER, {
+    props: ({ ownProps, mutate }) => ({
+        editOrder: (order) => mutate({
+            variables: { order },
+        }),
+    }),
+});
+
+const OrderDetailData = withEditOrder(OrderDetail);
+
+export default connect(mapStateToProps, mapDispatchToProps)(OrderDetailData);

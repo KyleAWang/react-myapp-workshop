@@ -1,0 +1,7 @@
+#import "./OrderFragment.graphql"
+
+mutation updateOrder($order: OrderInput!){
+    updateOrder(order: $order){
+        ...OrderFragment
+    }
+}

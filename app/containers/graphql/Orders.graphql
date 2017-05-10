@@ -1,0 +1,7 @@
+#import "./OrderFragment.graphql"
+
+query Orders{
+  orders{
+   ...OrderFragment
+  }
+}

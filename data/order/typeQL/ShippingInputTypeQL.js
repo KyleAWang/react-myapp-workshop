@@ -24,5 +24,8 @@ module.exports = new GraphQLInputObjectType({
         status: {
             type: GraphQLString
         },
+        _id: {
+            type: GraphQLID,
+        }
     })
 });

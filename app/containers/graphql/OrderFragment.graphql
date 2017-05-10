@@ -1,0 +1,32 @@
+fragment OrderFragment on Order {
+    _id
+    totalCost
+    totalRmbCost
+    orderId
+    subtotal
+    updated
+    created
+    status
+    items{
+      _id
+      name
+      url
+      price
+      quantity
+      subtotal
+    }
+    address{
+      name
+      tel
+      zip
+      weight
+      ID
+      address
+    }
+    shipping{
+      _id
+      no
+      url
+      status
+    }
+}

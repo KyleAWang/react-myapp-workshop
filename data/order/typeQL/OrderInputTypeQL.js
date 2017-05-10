@@ -15,7 +15,7 @@ const ShippingInputType = require('./ShippingInputTypeQL');
 const AddressInputType = require('./AddressInputTypeQL');
 const ItemInputType = require('./ItemInputTypeQL');
 
-const CustomGraphQLDateType = require('graphql-custom-datetype');
+const GraphQLDate = require('graphql-date');
 
 module.exports = new GraphQLInputObjectType({
     name: 'OrderInput',
@@ -37,10 +37,10 @@ module.exports = new GraphQLInputObjectType({
             type: new GraphQLNonNull(GraphQLFloat)
         },
         updated: {
-            type: CustomGraphQLDateType
+            type: GraphQLDate
         },
         created: {
-            type: CustomGraphQLDateType
+            type: GraphQLDate
         },
         status: {
             type: GraphQLString

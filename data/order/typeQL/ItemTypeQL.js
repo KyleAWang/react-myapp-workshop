@@ -28,7 +28,7 @@ module.exports = new GraphQLObjectType({
             type: GraphQLInt
         },
         subtotal: {
-            type: new GraphQLNonNull(GraphQLFloat)
+            type: GraphQLFloat
         }
     })
 })

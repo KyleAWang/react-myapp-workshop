@@ -14,7 +14,7 @@ const ItemTypeQL = require('./ItemTypeQL');
 const AddressTypeQL = require('./AddressTypeQL');
 const ShippingTypeQL = require('./ShippingTypeQL');
 
-const CustomGraphQLDateType = require('graphql-custom-datetype');
+const GraphQLDate = require('graphql-date');
 
 module.exports = new GraphQLObjectType({
     name: 'Order',
@@ -36,10 +36,10 @@ module.exports = new GraphQLObjectType({
             type: new GraphQLNonNull(GraphQLFloat)
         },
         updated: {
-            type: new GraphQLNonNull(CustomGraphQLDateType)
+            type: new GraphQLNonNull(GraphQLDate)
         },
         created: {
-            type: new GraphQLNonNull(CustomGraphQLDateType)
+            type: new GraphQLNonNull(GraphQLDate)
         },
         status: {
             type: GraphQLString

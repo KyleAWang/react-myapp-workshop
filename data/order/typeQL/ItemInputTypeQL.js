@@ -26,6 +26,9 @@ module.exports = new GraphQLInputObjectType({
         },
         subtotal: {
             type: new GraphQLNonNull(GraphQLFloat)
+        },
+        _id: {
+            type: GraphQLID,
         }
     })
 })
