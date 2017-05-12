@@ -1,7 +1,7 @@
 #import "./OrderFragment.graphql"
 
-query Orders{
-  orders{
+query Orders($offset: Int, $limit: Int){
+  orders(offset: $offset, limit: $limit){
    ...OrderFragment
   }
 }

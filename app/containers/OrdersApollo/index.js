@@ -13,14 +13,14 @@ import ORDERS_QUERY from 'containers/graphql/Orders.graphql';
 
 export class OrdersApollo extends React.Component {
     render() {
-        const orders = this.props.orders;
+        const { orders, fetchMore }= this.props;
 
         let content = <div>Loading...</div>
         if (orders){
             // content = orders.map((order, index) => (
             //     <div key={index}>{order.subtotal}</div>
             // ));
-            content = (<KTable items={orders} />);
+            content = (<KTable items={orders} onLoadMore={fetchMore}/>);
         }
 
         return <div>
@@ -35,52 +35,37 @@ OrdersApollo.propTypes = {
         React.PropTypes.array,
     ]),
     loading: React.PropTypes.bool,
+    fetchMore: React.PropTypes.func,
 };
 
-const OrdersForLayout = gql`
-    query {
-      orders{
-        _id
-        totalCost
-        totalRmbCost
-        orderId
-        subtotal
-        updated
-        created
-        status
-        items{
-          _id
-          name
-          url
-          price
-          quantity
-          subtotal
-        }
-        address{
-          name
-          tel
-          zip
-          weight
-          ID
-          address
-        }
-        shipping{
-          _id
-          no
-          url
-          status
-        }
-      }
-    }
-`;
-
-const Query = gql`query {orders{_id
-        subtotal}}`;
+const ITEMS_PER_PAGE = 10;
 
 const OrdersApolloWithData = graphql(ORDERS_QUERY, {
-    props: ({data: {loading, orders}}) => ({
+    options: () => {
+        return {
+            variables: {
+                offset: 0,
+                limit: ITEMS_PER_PAGE,
+            }
+        }
+    },
+    props: ({data: {loading, orders, fetchMore}}) => ({
         loading,
-        orders
+        orders,
+        fetchMore: () => fetchMore({
+            variables: {
+                offset: orders.length,
+            },
+            updateQuery: (prev, {fetchMoreResult}) => {
+                console.log('updateQuery');
+                if(!fetchMoreResult.orders) {
+                    return prev;
+                }
+                return Object.assign({}, prev, {
+                    orders: [...prev.orders, ...fetchMoreResult.orders],
+                });
+            }
+        })
     }),
 })(OrdersApollo);
 

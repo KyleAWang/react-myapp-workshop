@@ -10,10 +10,12 @@ import Shipping from 'components/Shipping';
 import OrderDetail from './OrderDetail';
 import { loadOrder } from 'containers/OrdersPage/actions';
 import { makeSelectOrder, makeSelectShowModal } from 'containers/OrdersPage/selectors';
+import './styles/index.scss';
 
 class KTable extends React.Component{
     render(){
-        const { items } = this.props;
+        const { items, onLoadMore } = this.props;
+
 
         const popover = (
             <Popover id="modal-popover" title="popover">
@@ -54,7 +56,7 @@ class KTable extends React.Component{
         ));
 
         return(
-            <div>
+            <div className="main_block">
                 <Table responsive striped hover condensed>
                     <thead>
                         <tr>
@@ -74,6 +76,9 @@ class KTable extends React.Component{
                     </tbody>
                 </Table>
                 <OrderDetail/>
+                <div className="center_button">
+                    <Button className='center_button' bsStyle="info"  onClick={onLoadMore}>Load More...</Button>
+                </div>
             </div>
         );
     };
@@ -82,6 +87,7 @@ class KTable extends React.Component{
 KTable.propTypes = {
     items: React.PropTypes.array,
     loadOrder: React.PropTypes.func,
+    onLoadMore: React.PropTypes.func,
 };
 
 const mapStateToProps = createStructuredSelector({
