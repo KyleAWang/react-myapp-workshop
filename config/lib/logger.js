@@ -1,27 +1,27 @@
-'use strict';
 
-var _ = require('lodash'),
+
+let _ = require('lodash'),
   config = require('../config'),
   chalk = require('chalk'),
   fs = require('fs'),
   winston = require('winston');
 
 // list of valid formats for the logging
-var validFormats = ['combined', 'common', 'dev', 'short', 'tiny'];
+const validFormats = ['combined', 'common', 'dev', 'short', 'tiny'];
 
 // Instantiating the default winston application logger with the Console
 // transport
-var logger = new winston.Logger({
+const logger = new winston.Logger({
   transports: [
     new winston.transports.Console({
       level: 'info',
       colorize: true,
       showLevel: true,
       handleExceptions: true,
-      humanReadableUnhandledException: true
-    })
+      humanReadableUnhandledException: true,
+    }),
   ],
-  exitOnError: false
+  exitOnError: false,
 });
 
 // A stream object with a write function that will call the built-in winston
@@ -29,9 +29,9 @@ var logger = new winston.Logger({
 // Useful for integrating with stream-related mechanism like Morgan's stream
 // option to log all HTTP requests to a file
 logger.stream = {
-  write: function(msg) {
+  write(msg) {
     logger.info(msg);
-  }
+  },
 };
 
 /**
@@ -40,8 +40,7 @@ logger.stream = {
  * @param logger a valid winston logger object
  */
 logger.setupFileLogger = function setupFileLogger(options) {
-
-  var fileLoggerTransport = this.getLogOptions();
+  const fileLoggerTransport = this.getLogOptions();
   if (!fileLoggerTransport) {
     return false;
   }
@@ -64,7 +63,6 @@ logger.setupFileLogger = function setupFileLogger(options) {
 
     return false;
   }
-
 };
 
 /**
@@ -73,20 +71,19 @@ logger.setupFileLogger = function setupFileLogger(options) {
  * Returns a Winston object for logging with the File transport
  */
 logger.getLogOptions = function getLogOptions(configOptions) {
-
-  var _config = _.clone(config, true);
+  let _config = _.clone(config, true);
   if (configOptions) {
     _config = configOptions;
   }
 
-  var configFileLogger = _config.log.fileLogger;
+  const configFileLogger = _config.log.fileLogger;
 
   if (!_.has(_config, 'log.fileLogger.directoryPath') || !_.has(_config, 'log.fileLogger.fileName')) {
     console.log('unable to find logging file configuration');
     return false;
   }
 
-  var logPath = configFileLogger.directoryPath + '/' + configFileLogger.fileName;
+  const logPath = `${configFileLogger.directoryPath}/${configFileLogger.fileName}`;
 
   return {
     level: 'debug',
@@ -100,9 +97,8 @@ logger.getLogOptions = function getLogOptions(configOptions) {
     tailable: true,
     showLevel: true,
     handleExceptions: true,
-    humanReadableUnhandledException: true
+    humanReadableUnhandledException: true,
   };
-
 };
 
 /**
@@ -112,11 +108,9 @@ logger.getLogOptions = function getLogOptions(configOptions) {
  * file logging transport (if available)
  */
 logger.getMorganOptions = function getMorganOptions() {
-
   return {
-    stream: logger.stream
+    stream: logger.stream,
   };
-
 };
 
 /**
@@ -125,7 +119,7 @@ logger.getMorganOptions = function getMorganOptions() {
  * Returns the log.format option set in the current environment configuration
  */
 logger.getLogFormat = function getLogFormat() {
-  var format = config.log && config.log.format ? config.log.format.toString() : 'combined';
+  let format = config.log && config.log.format ? config.log.format.toString() : 'combined';
 
   // make sure we have a valid format
   if (!_.includes(validFormats, format)) {
@@ -133,7 +127,7 @@ logger.getLogFormat = function getLogFormat() {
 
     if (process.env.NODE_ENV !== 'test') {
       console.log();
-      console.log(chalk.yellow('Warning: An invalid format was provided. The logger will use the default format of "' + format + '"'));
+      console.log(chalk.yellow(`Warning: An invalid format was provided. The logger will use the default format of "${format}"`));
       console.log();
     }
   }

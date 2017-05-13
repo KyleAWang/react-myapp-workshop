@@ -7,41 +7,41 @@ import createReducer from './reducers';
 const sagaMiddleware = createSagaMiddleware();
 
 export default function configureStore(initialState = {}, history, apolloClient) {
-    const middlewares = [
-        sagaMiddleware,
-        routerMiddleware(history),
-        apolloClient.middleware(),
-    ];
+  const middlewares = [
+    sagaMiddleware,
+    routerMiddleware(history),
+    apolloClient.middleware(),
+  ];
 
-    const enhancers = [
-        applyMiddleware(...middlewares),
-    ];
+  const enhancers = [
+    applyMiddleware(...middlewares),
+  ];
 
-    const composeEnhancers =
+  const composeEnhancers =
         process.env.NODE_ENV !== 'production' &&
         typeof window === 'object' &&
         window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ ?
             window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ : compose;
 
-    const store = createStore(
+  const store = createStore(
         createReducer(null, apolloClient),
         fromJS(initialState),
         composeEnhancers(...enhancers),
     );
 
-    store.runSaga = sagaMiddleware.run;
-    store.asyncReducers = {};
+  store.runSaga = sagaMiddleware.run;
+  store.asyncReducers = {};
 
-    if (module.hot) {
-        module.hot.accept('./reducers', () => {
-            import('./reducers').then((reducerModule) => {
-                const createReducers = reducerModule.default;
-                const nextReducers = createReducers(store.asyncReducers);
+  if (module.hot) {
+    module.hot.accept('./reducers', () => {
+      import('./reducers').then((reducerModule) => {
+        const createReducers = reducerModule.default;
+        const nextReducers = createReducers(store.asyncReducers);
 
-                store.replaceReducer((nextReducers));
-            });
-        });
-    }
+        store.replaceReducer((nextReducers));
+      });
+    });
+  }
 
-    return store;
+  return store;
 }

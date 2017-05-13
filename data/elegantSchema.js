@@ -5,12 +5,12 @@ const {
     GraphQLInt,
     GraphQLNonNull,
     GraphQLList,
-    GraphQLID
+    GraphQLID,
 } = require('graphql');
 
 const {
     OrderQueries,
-    OrderMutations
+    OrderMutations,
 } = require('./order/OrderQL');
 
 
@@ -22,24 +22,24 @@ const {
 // });
 
 const RootQuery = new GraphQLObjectType({
-    name: 'Root',
-    fields: {
-        orders: OrderQueries.orders,
-        order: OrderQueries.order,
-    }
+  name: 'Root',
+  fields: {
+    orders: OrderQueries.orders,
+    order: OrderQueries.order,
+  },
 });
 
 const RootMutation = new GraphQLObjectType({
-    name: 'Mutation',
-    fields: () => ({
-        addOrder: OrderMutations.addOrder,
-        updateOrder: OrderMutations.updateOrder,
-    })
+  name: 'Mutation',
+  fields: () => ({
+    addOrder: OrderMutations.addOrder,
+    updateOrder: OrderMutations.updateOrder,
+  }),
 });
 
 const schema = new GraphQLSchema({
-    query: RootQuery,
-    mutation: RootMutation
+  query: RootQuery,
+  mutation: RootMutation,
 });
 
 module.exports.schema = schema;

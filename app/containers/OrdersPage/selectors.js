@@ -7,22 +7,16 @@ const makeSelectOreders = () => createSelector(
     (ordersState) => ordersState.get('orders'),
 );
 
-const makeSelectItem = () => createSelector(
-    selectOrders,
-    (selectOrders) => selectOrders.get('item'),
-);
-
-
 // const selectOrder = (state) => state.get('order');
 
 const makeSelectOrder = () => createSelector(
     selectOrders,
-    (selectOrders) => selectOrders.get('order'),
+    (ordersState) => ordersState.get('order'),
 );
 
 const makeSelectShowModal = () => createSelector(
     selectOrders,
-    (selectOrders) => selectOrders.get('showModal'),
+    (ordersState) => ordersState.get('showModal'),
 );
 
 export {

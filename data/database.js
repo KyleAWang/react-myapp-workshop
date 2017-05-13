@@ -10,10 +10,10 @@ const OrderDB = mongoose.model('Order');
 
 
 module.exports = class Order {
-}
+};
 
 module.exports = class Item {
-}
+};
 // let orders = new Orders();
 const order = new Order();
 
@@ -25,33 +25,32 @@ const order = new Order();
 const orders = [];
 
 module.exports = function getOrders() {
+  const promise = OrderDB.find().select('orderId items.name items.price items.quantity  subtotal').exec();
+  promise.then((orders) => {
+    console.log(orders[0].items);
+  });
 
-    let promise = OrderDB.find().select('orderId items.name items.price items.quantity  subtotal').exec();
-    promise.then(function (orders) {
-        console.log(orders[0].items);
-    });
 
-
-    return promise;
-}
+  return promise;
+};
 
 module.exports = function getOrder(orderId) {
-    console.log('db.getorder_id', orderId);
-    console.log(orders.find(order => order.orderId === orderId));
-    return orders.find(order => order.orderId === orderId);
-}
+  console.log('db.getorder_id', orderId);
+  console.log(orders.find((order) => order.orderId === orderId));
+  return orders.find((order) => order.orderId === orderId);
+};
 
 module.exports = function getItems() {
-    console.log('items:', items);
-    return items;
-}
+  console.log('items:', items);
+  return items;
+};
 
 module.exports = function newOrder(orderId, subTotal, items) {
-    console.log('orderId:', orderId, '  subtotal:', subTotal);
-    let _order = new Order();
-    _order.orderId = orderId;
-    _order.subtotal = subTotal;
-    _order.items = items;
-    orders.push(_order);
-    return _order;
-}
+  console.log('orderId:', orderId, '  subtotal:', subTotal);
+  const _order = new Order();
+  _order.orderId = orderId;
+  _order.subtotal = subTotal;
+  _order.items = items;
+  orders.push(_order);
+  return _order;
+};
