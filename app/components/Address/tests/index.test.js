@@ -1,30 +1,47 @@
 import React from 'react';
-import { mount } from 'enzyme';
+import { shallow } from 'enzyme';
 
 import Address from '../index';
 
 const address = {
-  ID: '320682198310146143',
-  address: '中国上海市杨浦区控江路1505弄20号401',
-  name: '张小燕',
-  tel: '15801859839',
-  weight: 3880,
-  zip: '200093',
+  address: '中国上海市杨浦区控江路',
+  name: '张小',
+  tel: '15822221111',
+  weight: '3880',
 };
 
-const childName = <div>张小燕,15801859839</div>;
-const childAddress = <div>中国上海市杨浦区控江路1505弄20号401</div>;
-const childWeight = <div>3880</div>;
+const childName = (<li>张小</li>);
+const childTel = (<li><span>Tel:</span><span>15822221111</span></li>);
+const childAddress = <li>中国上海市杨浦区控江路</li>;
+const childWeight = (<li>3880</li>);
 
-const renderComponent = () => mount(
+
+const renderComponent = () => shallow(
   <Address address={address} />
 );
 
-describe('<Address />', () => {
-  it('should have children', () => {
+describe('<Address /> with address', () => {
+  it('should have correct name', () => {
     const renderedComponent = renderComponent();
-    expect(renderedComponent.contains(childName)).toEqual(true);
-    expect(renderedComponent.contains(childAddress)).toEqual(true);
+    expect(renderedComponent.contains(childName)).toBe(true);
+  });
+  it('should have correct tel', () => {
+    const renderedComponent = renderComponent();
+    expect(renderedComponent.contains(childTel)).toBe(true);
+  });
+  it('should have correct address', () => {
+    const renderedComponent = renderComponent();
+    expect(renderedComponent.contains(childAddress)).toBe(true);
+  });
+  it('should have correct weight', () => {
+    const renderedComponent = renderComponent();
     expect(renderedComponent.contains(childWeight)).toEqual(true);
+  });
+});
+
+describe('<Address /> without address info', () => {
+  it('should have empty <div/>', () => {
+    const add = shallow(<Address />);
+    expect(add.contains(<div></div>)).toBe(true);
   });
 });

@@ -16,7 +16,7 @@ export class OrdersPage extends React.Component {
 
   render() {
     const { orders } = this.props;
-    let content = (<div></div>);
+    let content;
 
     if (orders) {
       content = (<KTable items={orders} />);
