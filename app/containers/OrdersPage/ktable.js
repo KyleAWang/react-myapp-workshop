@@ -10,7 +10,7 @@ import Shipping from 'components/Shipping';
 import OrderDetail from './OrderDetail';
 import { loadOrder } from './actions';
 
-class KTable extends React.Component {
+export class KTable extends React.Component {
   render() {
     const { items } = this.props;
 
