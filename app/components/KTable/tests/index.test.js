@@ -1,16 +1,9 @@
 import React from 'react';
-import { shallow, mount } from 'enzyme';
+import { shallow } from 'enzyme';
 
-import { OrdersPage, mapDispatchToProps } from '../index';
-import { KTable } from 'components/KTable';
-import { loadOrder, loadOrders } from '../actions';
+import KTable from '../index';
+import OrderDetail from 'containers/OrdersPage/OrderDetail';
 
-const order = {
-  "_id": "5912937e07835c3ea03186e7",
-  "orderId": "20160703202175",
-  "created": "2017-05-17T00:00:00.000Z",
-  "subtotal": 110.29,
-};
 
 const orders =  [
   {
@@ -45,11 +38,11 @@ const orders =  [
       }
     ],
     "address": {
-      "name": "张小燕",
-      "tel": "15801859839",
-      "zip": "200093",
+      "name": "张小",
+      "tel": "15801859",
+      "zip": "203",
       "weight": 3880,
-      "address": "中国上海市杨浦区控江路1505弄20号401"
+      "address": "中国上海市杨浦区控江"
     },
     "shipping": [
       {
@@ -110,11 +103,11 @@ const orders =  [
       }
     ],
     "address": {
-      "name": "彭琪",
-      "tel": "008615800824458",
+      "name": "彭",
+      "tel": "0086158008",
       "zip": null,
       "weight": 2015,
-      "address": "中国上海宝山区松兰路198弄153号404"
+      "address": "中国上海宝山区松兰路"
     },
     "shipping": [
       {
@@ -125,57 +118,20 @@ const orders =  [
     ]
   }];
 
-describe('<OrdersPage />', () => {
-  it ('should render loading div if no order', () => {
+
+describe ('<KTable/>', () => {
+  it ('should render empty content if no order', () => {
     const renderedComponent = shallow(
-      <OrdersPage />
+      <KTable/>
     );
-    expect(renderedComponent.contains(<div>Loading...</div>)).toBe(true);
+    expect(renderedComponent.contains(<div></div>)).toBe(true);
   });
 
-  it ('should render KTable with orders', ()  => {
+  it ('should render order list if orders are not empty', () => {
+    const loadSpy = jest.fn();
     const renderedComponent = shallow(
-      <OrdersPage orders={orders}/>
+      <KTable items={orders} loadOrder={loadSpy}/>
     );
-    expect(renderedComponent.find(<KTable items={orders}/>)).toBeDefined();
-  });
-
-  it('should render loadOrders on mount', () => {
-    const loadOrdersSpy = jest.fn();
-    mount(<OrdersPage loadOrders={loadOrdersSpy}/>);
-    expect(loadOrdersSpy).toHaveBeenCalled();
-  });
-
-
-  describe('mapDispatchToProps', () => {
-    describe(' loadOrder', () => {
-      it('should be injected', () => {
-        const dispatch = jest.fn();
-        const result = mapDispatchToProps(dispatch);
-        expect(result.loadOrder).toBeDefined();
-      });
-
-      it(' should dispatch loadOrder when called', () => {
-        const dispatch = jest.fn();
-        const result = mapDispatchToProps(dispatch);
-        result.loadOrder(order);
-        expect(dispatch).toHaveBeenCalledWith(loadOrder(order));
-      })
-    });
-
-    describe(' loadOrders', () => {
-      it('should be injected', () => {
-        const dispatch = jest.fn();
-        const result = mapDispatchToProps(dispatch);
-        expect(result.loadOrders).toBeDefined();
-      });
-
-      it ('should dispatch loadOrders when called', () => {
-        const dispatch = jest.fn();
-        const result = mapDispatchToProps(dispatch);
-        result.loadOrders();
-        expect(dispatch).toHaveBeenCalledWith(loadOrders());
-      })
-    })
+    expect(renderedComponent.contains(<OrderDetail/>)).toBe(true);
   });
 });

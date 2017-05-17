@@ -3,9 +3,10 @@ import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
 
 import { makeSelectError, makeSelectLoading } from 'containers/App/selectors';
-import { loadOrders } from './actions';
+import { loadOrders, loadOrder } from './actions';
 import { makeSelectOreders } from './selectors';
-import KTable from './ktable';
+// import KTable from './ktable';
+import KTable from 'components/KTable';
 
 
 export class OrdersPage extends React.Component {
@@ -19,7 +20,7 @@ export class OrdersPage extends React.Component {
     let content;
 
     if (orders) {
-      content = (<KTable items={orders} />);
+      content = (<KTable items={orders} loadOrder={loadOrder}/>);
     } else {
       content = (<div>Loading...</div>);
     }
@@ -55,6 +56,7 @@ const mapStateToProps = createStructuredSelector({
 export function mapDispatchToProps(dispatch) {
   return {
     loadOrders: () => dispatch(loadOrders()),
+    loadOrder: (order) => dispatch(loadOrder(order)),
   };
 }
 

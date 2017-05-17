@@ -215,7 +215,7 @@ export class OrderDetail extends React.PureComponent {
     this.props.onUpdateOrder(ord);
   }
 
-  itemsResolver() {
+  itemsResolver(order) {
     return order.items.map((item, index) => (
       <Row className="clearfix" key={`oitem-${index}`}>
         <Col lg={4} md={6} xs={12}>
@@ -267,7 +267,7 @@ export class OrderDetail extends React.PureComponent {
     ));
   }
 
-  addressResolver() {
+  addressResolver(order) {
     return (
       <Row className="clearfix">
         <Col lg={4} md={6} xs={12}>
@@ -324,7 +324,7 @@ export class OrderDetail extends React.PureComponent {
     );
   }
 
-  shippingResolver() {
+  shippingResolver(order) {
     return order.shipping.map((item, index) => (
       <Row className="clearfix" key={`sitem-${index}`}>
         <Col lg={4} md={6} xs={12}>
@@ -378,15 +378,15 @@ export class OrderDetail extends React.PureComponent {
       let addressItemContent = <div></div>;
 
       if (order.shipping) {
-        shippingContent = this.shippingResolver();
+        shippingContent = this.shippingResolver(order);
       }
 
       if (order.items) {
-        orderItemContent = this.itemsResolver();
+        orderItemContent = this.itemsResolver(order);
       }
 
       if (order.address) {
-        addressItemContent = this.addressResolver();
+        addressItemContent = this.addressResolver(order);
       }
 
       content = (

@@ -53,7 +53,6 @@ export function changeSubtotal(subtotal) {
 }
 
 export function updateOrder(order) {
-  console.log('updateOrder:', order);
   return {
     type: UPDATE_ORDER,
     order,
