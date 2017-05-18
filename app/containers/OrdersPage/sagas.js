@@ -10,6 +10,7 @@ export function* getOrders() {
 
   try {
     const orders = yield call(request, requestURL);
+    console.log('orders here');
     yield put(loadOrdersSuccess(orders.data.orders));
   } catch (err) {
     yield put(loadOrdersError(err));
