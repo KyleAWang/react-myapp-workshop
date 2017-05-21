@@ -1,13 +1,13 @@
 import React from 'react';
-import {connect} from 'react-redux';
-import {createStructuredSelector} from 'reselect';
-import {Button, Modal, Panel, PanelGroup, FormGroup, FormControl, ControlLabel, Row, Col} from 'react-bootstrap';
+import { connect } from 'react-redux';
+import { createStructuredSelector } from 'reselect';
+import { Button, Modal, Panel, PanelGroup, FormGroup, FormControl, ControlLabel, Row, Col } from 'react-bootstrap';
 import DatePicker from 'react-bootstrap-date-picker';
 
 import FieldGroup from 'components/FieldGroup';
-import {convertStringToNumber} from 'utils/convertHelper';
-import {closeOrder, updateOrder, submitUpdateForm} from './actions';
-import {makeSelectOrder, makeSelectShowModal} from './selectors';
+import { convertStringToNumber } from 'utils/convertHelper';
+import { closeOrder, updateOrder, submitUpdateForm } from './actions';
+import { makeSelectOrder, makeSelectShowModal } from './selectors';
 
 
 export class OrderDetail extends React.PureComponent {
@@ -370,7 +370,7 @@ export class OrderDetail extends React.PureComponent {
   }
 
   render() {
-    const {order, showModal} = this.props;
+    const { order, showModal } = this.props;
     let content = <div>Loading...</div>;
     if (order) {
       let shippingContent = <div></div>;
@@ -411,14 +411,16 @@ export class OrderDetail extends React.PureComponent {
                   <Col lg={4} md={6} xs={12}>
                     <FormGroup controlId="formControlsText">
                       <ControlLabel>Created</ControlLabel>
-                      <DatePicker id="example-datepicker" value={order.created} onChange={this.changeCreatedDate}/>
+                      <DatePicker id="example-datepicker" value={order.created} onChange={this.changeCreatedDate} />
                     </FormGroup>
                   </Col>
                   <Col lg={4} md={6} xs={12}>
                     <FormGroup controlId="formControlsSelect">
                       <ControlLabel>Status</ControlLabel>
-                      <FormControl componentClass="select" placeholder="Status" value={order.status || ''}
-                                   onChange={this.changeStatus}>
+                      <FormControl
+                        componentClass="select" placeholder="Status" value={order.status || ''}
+                        onChange={this.changeStatus}
+                      >
                         <option value="">--Choose one--</option>
                         <option value="Submitted">Submitted</option>
                         <option value="Delivery">Delivery</option>
@@ -470,6 +472,7 @@ export class OrderDetail extends React.PureComponent {
         </Modal>
       );
     }
+
 
     return (
       <div>

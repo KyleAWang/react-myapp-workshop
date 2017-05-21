@@ -5,7 +5,7 @@ import Header from 'components/Header';
 import App from '../index';
 
 describe('<App />', () => {
-  it ('should render the header', () => {
+  it('should render the header', () => {
     const renderedComponent = shallow(
       <App />
     );

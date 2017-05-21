@@ -62,12 +62,33 @@ export default function createRoutes(store, apolloClient) {
       name: 'ordersap',
       getComponent(nextState, cb) {
         const importModules = Promise.all([
-          import('containers/OrdersApollo'),
-        ]);
+        import('containers/OrdersApollo'),
+      ]);
 
         const renderRoute = loadModule(cb);
 
         importModules.then(([component]) => {
+          renderRoute(component);
+        });
+
+        importModules.catch(errorLoading);
+      },
+    },
+    {
+      path: '/login',
+      name: 'login',
+      getComponent(nextState, cb) {
+        const importModules = Promise.all([
+          import('containers/LoginPage/reducer'),
+          import('containers/LoginPage/sagas'),
+          import('containers/LoginPage'),
+        ]);
+
+        const renderRoute = loadModule(cb);
+
+        importModules.then(([reducer, sagas, component]) => {
+          injectReducer('user', reducer.default);
+          injectSagas(sagas.default);
           renderRoute(component);
         });
 

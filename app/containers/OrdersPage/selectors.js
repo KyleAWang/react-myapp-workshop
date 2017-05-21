@@ -7,7 +7,6 @@ const makeSelectOreders = () => createSelector(
     (ordersState) => ordersState.get('orders'),
 );
 
-// const selectOrder = (state) => state.get('order');
 
 const makeSelectOrder = () => createSelector(
     selectOrders,
@@ -22,7 +21,6 @@ const makeSelectShowModal = () => createSelector(
 export {
     selectOrders,
     makeSelectOreders,
-    // selectOrder,
     makeSelectShowModal,
     makeSelectOrder,
 };

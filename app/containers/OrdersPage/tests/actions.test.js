@@ -1,17 +1,17 @@
 import {
-	LOAD_ORDERS
+  LOAD_ORDERS,
 } from '../constants';
 
-import { loadOrders } from '../actions'
+import { loadOrders } from '../actions';
 
 
 describe('OrdersPage Actions', () => {
-	describe('loadOrders', () => {
-		it('should return the correct type', () => {
-			const expectedResult = {
-				type: LOAD_ORDERS,
-			};
-			expect(loadOrders()).toEqual(expectedResult);
-		})
-	})
-})
+  describe('loadOrders', () => {
+    it('should return the correct type', () => {
+      const expectedResult = {
+        type: LOAD_ORDERS,
+      };
+      expect(loadOrders()).toEqual(expectedResult);
+    });
+  });
+});

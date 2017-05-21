@@ -1,7 +1,7 @@
 import React from 'react';
-import FieldGroup from '../index';
 import { shallow } from 'enzyme';
-import { ControlLabel, FormControl } from 'react-bootstrap';
+import { ControlLabel } from 'react-bootstrap';
+import FieldGroup from '../index';
 
 const props = {
   id: 'formControlsText',
@@ -17,11 +17,11 @@ const renderComponent = () => shallow(
     label={props.label}
     placeholder={props.placeholder}
     type={props.type}
-    value={props.value}/>
+    value={props.value}
+  />
 );
 
 describe('<FieldGroup />', () => {
-
   it('should have a label', () => {
     const renderedComponent = renderComponent();
     const label = <ControlLabel>{props.label}</ControlLabel>;

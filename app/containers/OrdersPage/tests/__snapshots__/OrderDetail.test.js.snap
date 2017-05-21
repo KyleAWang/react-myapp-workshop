@@ -1,0 +1,2948 @@
+exports[`<OrderDetail /> should render order 1`] = `
+ShallowWrapper {
+  "complexSelector": ComplexSelector {
+    "buildPredicate": [Function],
+    "childrenOfNode": [Function],
+    "findWhereUnwrapped": [Function],
+  },
+  "length": 1,
+  "node": <div>
+    <Modal
+        animation={true}
+        autoFocus={true}
+        backdrop={true}
+        bsClass="modal"
+        bsSize="lg"
+        dialogComponentClass={[Function]}
+        enforceFocus={true}
+        keyboard={true}
+        manager={
+            ModalManager {
+                "containers": Array [],
+                "data": Array [],
+                "handleContainerOverflow": true,
+                "hideSiblingNodes": true,
+                "modals": Array [],
+              }
+        }
+        onHide={[Function]}
+        renderBackdrop={[Function]}
+        restoreFocus={true}
+        show={false}>
+        <ModalHeader
+            aria-label="Close"
+            bsClass="modal-header"
+            closeButton={true}>
+            <ModalTitle
+                bsClass="modal-title"
+                componentClass="h4">
+                Order Id: 
+                20160703202175
+            </ModalTitle>
+        </ModalHeader>
+        <ModalBody
+            bsClass="modal-body"
+            componentClass="div">
+            <PanelGroup
+                accordion={true}
+                bsClass="panel-group"
+                defaultActiveKey="1">
+                <Panel
+                    bsClass="panel"
+                    bsStyle="default"
+                    defaultExpanded={false}
+                    eventKey="1"
+                    expanded={true}
+                    header="General">
+                    <Row
+                        bsClass="row"
+                        className="clearfix"
+                        componentClass="div">
+                        <Col
+                            bsClass="col"
+                            componentClass="div"
+                            lg={4}
+                            md={6}
+                            xs={12}>
+                            <FieldGroup
+                                id="formControlsText"
+                                label="Sub Total"
+                                onChange={[Function]}
+                                placekholder="sub total"
+                                type="number"
+                                value={110.29} />
+                        </Col>
+                        <Col
+                            bsClass="col"
+                            componentClass="div"
+                            lg={4}
+                            md={6}
+                            xs={12}>
+                            <FormGroup
+                                bsClass="form-group"
+                                controlId="formControlsText">
+                                <ControlLabel
+                                    bsClass="control-label"
+                                    srOnly={false}>
+                                    Created
+                                </ControlLabel>
+                                <DatePicker
+                                    autoComplete="on"
+                                    autoFocus={false}
+                                    calendarPlacement="bottom"
+                                    cellPadding="5px"
+                                    clearButtonElement="×"
+                                    dateFormat="MM/DD/YYYY"
+                                    dayLabels={
+                                        Array [
+                                            "Sun",
+                                            "Mon",
+                                            "Tue",
+                                            "Wed",
+                                            "Thu",
+                                            "Fri",
+                                            "Sat",
+                                          ]
+                                    }
+                                    disabled={false}
+                                    id="example-datepicker"
+                                    instanceCount={0}
+                                    monthLabels={
+                                        Array [
+                                            "January",
+                                            "February",
+                                            "March",
+                                            "April",
+                                            "May",
+                                            "June",
+                                            "July",
+                                            "August",
+                                            "September",
+                                            "October",
+                                            "November",
+                                            "December",
+                                          ]
+                                    }
+                                    nextButtonElement=">"
+                                    onChange={[Function]}
+                                    previousButtonElement="<"
+                                    roundedCorners={false}
+                                    showClearButton={true}
+                                    showTodayButton={false}
+                                    style={
+                                        Object {
+                                            "width": "100%",
+                                          }
+                                    }
+                                    todayButtonLabel="Today"
+                                    value="2017-05-17T00:00:00.000Z" />
+                            </FormGroup>
+                        </Col>
+                        <Col
+                            bsClass="col"
+                            componentClass="div"
+                            lg={4}
+                            md={6}
+                            xs={12}>
+                            <FormGroup
+                                bsClass="form-group"
+                                controlId="formControlsSelect">
+                                <ControlLabel
+                                    bsClass="control-label"
+                                    srOnly={false}>
+                                    Status
+                                </ControlLabel>
+                                <FormControl
+                                    bsClass="form-control"
+                                    componentClass="select"
+                                    onChange={[Function]}
+                                    placeholder="Status"
+                                    value="Customers">
+                                    <option
+                                        value="">
+                                        --Choose one--
+                                    </option>
+                                    <option
+                                        value="Submitted">
+                                        Submitted
+                                    </option>
+                                    <option
+                                        value="Delivery">
+                                        Delivery
+                                    </option>
+                                    <option
+                                        value="Customers">
+                                        Customers
+                                    </option>
+                                    <option
+                                        value="DeliveryL">
+                                        DeliveryL
+                                    </option>
+                                    <option
+                                        value="Signed">
+                                        Signed
+                                    </option>
+                                </FormControl>
+                            </FormGroup>
+                        </Col>
+                    </Row>
+                    <Row
+                        bsClass="row"
+                        className="clearfix"
+                        componentClass="div">
+                        <Col
+                            bsClass="col"
+                            componentClass="div"
+                            lg={4}
+                            md={6}
+                            xs={12}>
+                            <FieldGroup
+                                id="formControlsText"
+                                label="Total Cost"
+                                onChange={[Function]}
+                                placekholder="Total Cost"
+                                type="number"
+                                value={109.29} />
+                        </Col>
+                        <Col
+                            bsClass="col"
+                            componentClass="div"
+                            lg={4}
+                            md={6}
+                            xs={12}>
+                            <FieldGroup
+                                id="formControlsText"
+                                label="Total RMB Cost"
+                                onChange={[Function]}
+                                placekholder="Total RMB Cost"
+                                type="number"
+                                value={519.8} />
+                        </Col>
+                    </Row>
+                </Panel>
+                <Panel
+                    bsClass="panel"
+                    bsStyle="default"
+                    defaultExpanded={false}
+                    eventKey="2"
+                    header="Shipping">
+                    <Row
+                        bsClass="row"
+                        className="clearfix"
+                        componentClass="div">
+                        <Col
+                            bsClass="col"
+                            componentClass="div"
+                            lg={4}
+                            md={6}
+                            xs={12}>
+                            <FieldGroup
+                                label="no"
+                                onChange={[Function]}
+                                placeholder="no"
+                                type="text"
+                                value="EF516295687NZ" />
+                        </Col>
+                        <Col
+                            bsClass="col"
+                            componentClass="div"
+                            lg={4}
+                            md={6}
+                            xs={12}>
+                            <FieldGroup
+                                label="url"
+                                onChange={[Function]}
+                                placeholder="url"
+                                type="text"
+                                value="http://member.efspost.net/cgi-bin/GInfo.dll?EmmisTrack?cno=EF516295687NZ" />
+                        </Col>
+                        <Col
+                            bsClass="col"
+                            componentClass="div"
+                            lg={4}
+                            md={6}
+                            xs={12}>
+                            <FormGroup
+                                bsClass="form-group"
+                                controlId="formControlsTextarea">
+                                <ControlLabel
+                                    bsClass="control-label"
+                                    srOnly={false}>
+                                    Items
+                                </ControlLabel>
+                                <FormControl
+                                    bsClass="form-control"
+                                    componentClass="textarea"
+                                    onChange={[Function]}
+                                    placeholder="textarea"
+                                    value="" />
+                            </FormGroup>
+                        </Col>
+                        <Col
+                            bsClass="col"
+                            componentClass="div"
+                            lg={4}
+                            md={6}
+                            xs={12}>
+                            <FieldGroup
+                                label="status"
+                                onChange={[Function]}
+                                placeholder="status"
+                                type="text"
+                                value="Signed" />
+                        </Col>
+                    </Row>
+                    <Row
+                        bsClass="row"
+                        className="clearfix"
+                        componentClass="div">
+                        <Col
+                            bsClass="col"
+                            componentClass="div"
+                            lg={4}
+                            md={6}
+                            xs={12}>
+                            <FieldGroup
+                                label="no"
+                                onChange={[Function]}
+                                placeholder="no"
+                                type="text"
+                                value="EF516295688NZ" />
+                        </Col>
+                        <Col
+                            bsClass="col"
+                            componentClass="div"
+                            lg={4}
+                            md={6}
+                            xs={12}>
+                            <FieldGroup
+                                label="url"
+                                onChange={[Function]}
+                                placeholder="url"
+                                type="text"
+                                value="http://member.efspost.net/cgi-bin/GInfo.dll?EmmisTrack?cno=EF516295688NZ" />
+                        </Col>
+                        <Col
+                            bsClass="col"
+                            componentClass="div"
+                            lg={4}
+                            md={6}
+                            xs={12}>
+                            <FormGroup
+                                bsClass="form-group"
+                                controlId="formControlsTextarea">
+                                <ControlLabel
+                                    bsClass="control-label"
+                                    srOnly={false}>
+                                    Items
+                                </ControlLabel>
+                                <FormControl
+                                    bsClass="form-control"
+                                    componentClass="textarea"
+                                    onChange={[Function]}
+                                    placeholder="textarea"
+                                    value="" />
+                            </FormGroup>
+                        </Col>
+                        <Col
+                            bsClass="col"
+                            componentClass="div"
+                            lg={4}
+                            md={6}
+                            xs={12}>
+                            <FieldGroup
+                                label="status"
+                                onChange={[Function]}
+                                placeholder="status"
+                                type="text"
+                                value="Signed" />
+                        </Col>
+                    </Row>
+                </Panel>
+                <Panel
+                    bsClass="panel"
+                    bsStyle="default"
+                    defaultExpanded={false}
+                    eventKey="3"
+                    header="Order Item">
+                    <Row
+                        bsClass="row"
+                        className="clearfix"
+                        componentClass="div">
+                        <Col
+                            bsClass="col"
+                            componentClass="div"
+                            lg={4}
+                            md={6}
+                            xs={12}>
+                            <FieldGroup
+                                label="name"
+                                onChange={[Function]}
+                                placeholder="name"
+                                type="text"
+                                value="Bio Island 幼儿童补锌咀嚼片宝宝锌片120粒提高免疫增强食欲" />
+                        </Col>
+                        <Col
+                            bsClass="col"
+                            componentClass="div"
+                            lg={4}
+                            md={6}
+                            xs={12}>
+                            <FieldGroup
+                                label="url"
+                                onChange={[Function]}
+                                placeholder="url"
+                                type="text"
+                                value="http://www.wellcome.co.nz/product-1877.html" />
+                        </Col>
+                        <Col
+                            bsClass="col"
+                            componentClass="div"
+                            lg={4}
+                            md={6}
+                            xs={12}>
+                            <FieldGroup
+                                label="price"
+                                onChange={[Function]}
+                                placeholder="price"
+                                type="text"
+                                value={17.85} />
+                        </Col>
+                        <Col
+                            bsClass="col"
+                            componentClass="div"
+                            lg={4}
+                            md={6}
+                            xs={12}>
+                            <FieldGroup
+                                label="quantity"
+                                onChange={[Function]}
+                                placeholder="quantity"
+                                type="text"
+                                value={1} />
+                        </Col>
+                        <Col
+                            bsClass="col"
+                            componentClass="div"
+                            lg={4}
+                            md={6}
+                            xs={12}>
+                            <FieldGroup
+                                label="subtotal"
+                                onChange={[Function]}
+                                placeholder="subtotal"
+                                type="text"
+                                value={17.85} />
+                        </Col>
+                    </Row>
+                    <Row
+                        bsClass="row"
+                        className="clearfix"
+                        componentClass="div">
+                        <Col
+                            bsClass="col"
+                            componentClass="div"
+                            lg={4}
+                            md={6}
+                            xs={12}>
+                            <FieldGroup
+                                label="name"
+                                onChange={[Function]}
+                                placeholder="name"
+                                type="text"
+                                value="SUSTAGEN 医院配方营养粉奶粉 老人孕妇体弱适用 840克 香草味 可直邮回国" />
+                        </Col>
+                        <Col
+                            bsClass="col"
+                            componentClass="div"
+                            lg={4}
+                            md={6}
+                            xs={12}>
+                            <FieldGroup
+                                label="url"
+                                onChange={[Function]}
+                                placeholder="url"
+                                type="text"
+                                value="http://www.wellcome.co.nz/product-1294.html" />
+                        </Col>
+                        <Col
+                            bsClass="col"
+                            componentClass="div"
+                            lg={4}
+                            md={6}
+                            xs={12}>
+                            <FieldGroup
+                                label="price"
+                                onChange={[Function]}
+                                placeholder="price"
+                                type="text"
+                                value={25.8} />
+                        </Col>
+                        <Col
+                            bsClass="col"
+                            componentClass="div"
+                            lg={4}
+                            md={6}
+                            xs={12}>
+                            <FieldGroup
+                                label="quantity"
+                                onChange={[Function]}
+                                placeholder="quantity"
+                                type="text"
+                                value={1} />
+                        </Col>
+                        <Col
+                            bsClass="col"
+                            componentClass="div"
+                            lg={4}
+                            md={6}
+                            xs={12}>
+                            <FieldGroup
+                                label="subtotal"
+                                onChange={[Function]}
+                                placeholder="subtotal"
+                                type="text"
+                                value={25.8} />
+                        </Col>
+                    </Row>
+                    <Row
+                        bsClass="row"
+                        className="clearfix"
+                        componentClass="div">
+                        <Col
+                            bsClass="col"
+                            componentClass="div"
+                            lg={4}
+                            md={6}
+                            xs={12}>
+                            <FieldGroup
+                                label="name"
+                                onChange={[Function]}
+                                placeholder="name"
+                                type="text"
+                                value="Ecostore 实木婴儿洗护礼盒 大号七件套" />
+                        </Col>
+                        <Col
+                            bsClass="col"
+                            componentClass="div"
+                            lg={4}
+                            md={6}
+                            xs={12}>
+                            <FieldGroup
+                                label="url"
+                                onChange={[Function]}
+                                placeholder="url"
+                                type="text"
+                                value="http://www.wellcome.co.nz/product-1759.html" />
+                        </Col>
+                        <Col
+                            bsClass="col"
+                            componentClass="div"
+                            lg={4}
+                            md={6}
+                            xs={12}>
+                            <FieldGroup
+                                label="price"
+                                onChange={[Function]}
+                                placeholder="price"
+                                type="text"
+                                value={64.64} />
+                        </Col>
+                        <Col
+                            bsClass="col"
+                            componentClass="div"
+                            lg={4}
+                            md={6}
+                            xs={12}>
+                            <FieldGroup
+                                label="quantity"
+                                onChange={[Function]}
+                                placeholder="quantity"
+                                type="text"
+                                value={1} />
+                        </Col>
+                        <Col
+                            bsClass="col"
+                            componentClass="div"
+                            lg={4}
+                            md={6}
+                            xs={12}>
+                            <FieldGroup
+                                label="subtotal"
+                                onChange={[Function]}
+                                placeholder="subtotal"
+                                type="text"
+                                value={64.64} />
+                        </Col>
+                    </Row>
+                </Panel>
+                <Panel
+                    bsClass="panel"
+                    bsStyle="default"
+                    defaultExpanded={false}
+                    eventKey="4"
+                    header="Address">
+                    <Row
+                        bsClass="row"
+                        className="clearfix"
+                        componentClass="div">
+                        <Col
+                            bsClass="col"
+                            componentClass="div"
+                            lg={4}
+                            md={6}
+                            xs={12}>
+                            <FieldGroup
+                                id="formControlsText"
+                                label="Name"
+                                onChange={[Function]}
+                                placekholder="Name"
+                                type="text"
+                                value="张小" />
+                        </Col>
+                        <Col
+                            bsClass="col"
+                            componentClass="div"
+                            lg={4}
+                            md={6}
+                            xs={12}>
+                            <FieldGroup
+                                id="formControlsText"
+                                label="Tel"
+                                onChange={[Function]}
+                                placekholder="Tel"
+                                type="text"
+                                value="15801859" />
+                        </Col>
+                        <Col
+                            bsClass="col"
+                            componentClass="div"
+                            lg={4}
+                            md={6}
+                            xs={12}>
+                            <FieldGroup
+                                id="formControlsText"
+                                label="Zip"
+                                onChange={[Function]}
+                                placekholder="Zip"
+                                type="text"
+                                value="2000" />
+                        </Col>
+                        <Col
+                            bsClass="col"
+                            componentClass="div"
+                            lg={4}
+                            md={6}
+                            xs={12}>
+                            <FieldGroup
+                                id="formControlsText"
+                                label="Weight"
+                                onChange={[Function]}
+                                placekholder="Weight"
+                                type="text"
+                                value={3880} />
+                        </Col>
+                        <Col
+                            bsClass="col"
+                            componentClass="div"
+                            lg={4}
+                            md={6}
+                            xs={12}>
+                            <FieldGroup
+                                id="formControlsText"
+                                label="Address"
+                                onChange={[Function]}
+                                placekholder="Address"
+                                type="text"
+                                value="中国上海市杨浦区控1" />
+                        </Col>
+                    </Row>
+                </Panel>
+            </PanelGroup>
+        </ModalBody>
+        <ModalFooter
+            bsClass="modal-footer"
+            componentClass="div">
+            <Button
+                active={false}
+                block={false}
+                bsClass="btn"
+                bsStyle="default"
+                disabled={false}
+                onClick={undefined}>
+                Update
+            </Button>
+            <Button
+                active={false}
+                block={false}
+                bsClass="btn"
+                bsStyle="default"
+                disabled={false}
+                onClick={undefined}>
+                Close
+            </Button>
+        </ModalFooter>
+    </Modal>
+</div>,
+  "nodes": Array [
+    <div>
+      <Modal
+            animation={true}
+            autoFocus={true}
+            backdrop={true}
+            bsClass="modal"
+            bsSize="lg"
+            dialogComponentClass={[Function]}
+            enforceFocus={true}
+            keyboard={true}
+            manager={
+                  ModalManager {
+                        "containers": Array [],
+                        "data": Array [],
+                        "handleContainerOverflow": true,
+                        "hideSiblingNodes": true,
+                        "modals": Array [],
+                      }
+            }
+            onHide={[Function]}
+            renderBackdrop={[Function]}
+            restoreFocus={true}
+            show={false}>
+            <ModalHeader
+                  aria-label="Close"
+                  bsClass="modal-header"
+                  closeButton={true}>
+                  <ModalTitle
+                        bsClass="modal-title"
+                        componentClass="h4">
+                        Order Id: 
+                        20160703202175
+                  </ModalTitle>
+            </ModalHeader>
+            <ModalBody
+                  bsClass="modal-body"
+                  componentClass="div">
+                  <PanelGroup
+                        accordion={true}
+                        bsClass="panel-group"
+                        defaultActiveKey="1">
+                        <Panel
+                              bsClass="panel"
+                              bsStyle="default"
+                              defaultExpanded={false}
+                              eventKey="1"
+                              expanded={true}
+                              header="General">
+                              <Row
+                                    bsClass="row"
+                                    className="clearfix"
+                                    componentClass="div">
+                                    <Col
+                                          bsClass="col"
+                                          componentClass="div"
+                                          lg={4}
+                                          md={6}
+                                          xs={12}>
+                                          <FieldGroup
+                                                id="formControlsText"
+                                                label="Sub Total"
+                                                onChange={[Function]}
+                                                placekholder="sub total"
+                                                type="number"
+                                                value={110.29} />
+                                    </Col>
+                                    <Col
+                                          bsClass="col"
+                                          componentClass="div"
+                                          lg={4}
+                                          md={6}
+                                          xs={12}>
+                                          <FormGroup
+                                                bsClass="form-group"
+                                                controlId="formControlsText">
+                                                <ControlLabel
+                                                      bsClass="control-label"
+                                                      srOnly={false}>
+                                                      Created
+                                                </ControlLabel>
+                                                <DatePicker
+                                                      autoComplete="on"
+                                                      autoFocus={false}
+                                                      calendarPlacement="bottom"
+                                                      cellPadding="5px"
+                                                      clearButtonElement="×"
+                                                      dateFormat="MM/DD/YYYY"
+                                                      dayLabels={
+                                                            Array [
+                                                                  "Sun",
+                                                                  "Mon",
+                                                                  "Tue",
+                                                                  "Wed",
+                                                                  "Thu",
+                                                                  "Fri",
+                                                                  "Sat",
+                                                                ]
+                                                      }
+                                                      disabled={false}
+                                                      id="example-datepicker"
+                                                      instanceCount={0}
+                                                      monthLabels={
+                                                            Array [
+                                                                  "January",
+                                                                  "February",
+                                                                  "March",
+                                                                  "April",
+                                                                  "May",
+                                                                  "June",
+                                                                  "July",
+                                                                  "August",
+                                                                  "September",
+                                                                  "October",
+                                                                  "November",
+                                                                  "December",
+                                                                ]
+                                                      }
+                                                      nextButtonElement=">"
+                                                      onChange={[Function]}
+                                                      previousButtonElement="<"
+                                                      roundedCorners={false}
+                                                      showClearButton={true}
+                                                      showTodayButton={false}
+                                                      style={
+                                                            Object {
+                                                                  "width": "100%",
+                                                                }
+                                                      }
+                                                      todayButtonLabel="Today"
+                                                      value="2017-05-17T00:00:00.000Z" />
+                                          </FormGroup>
+                                    </Col>
+                                    <Col
+                                          bsClass="col"
+                                          componentClass="div"
+                                          lg={4}
+                                          md={6}
+                                          xs={12}>
+                                          <FormGroup
+                                                bsClass="form-group"
+                                                controlId="formControlsSelect">
+                                                <ControlLabel
+                                                      bsClass="control-label"
+                                                      srOnly={false}>
+                                                      Status
+                                                </ControlLabel>
+                                                <FormControl
+                                                      bsClass="form-control"
+                                                      componentClass="select"
+                                                      onChange={[Function]}
+                                                      placeholder="Status"
+                                                      value="Customers">
+                                                      <option
+                                                            value="">
+                                                            --Choose one--
+                                                      </option>
+                                                      <option
+                                                            value="Submitted">
+                                                            Submitted
+                                                      </option>
+                                                      <option
+                                                            value="Delivery">
+                                                            Delivery
+                                                      </option>
+                                                      <option
+                                                            value="Customers">
+                                                            Customers
+                                                      </option>
+                                                      <option
+                                                            value="DeliveryL">
+                                                            DeliveryL
+                                                      </option>
+                                                      <option
+                                                            value="Signed">
+                                                            Signed
+                                                      </option>
+                                                </FormControl>
+                                          </FormGroup>
+                                    </Col>
+                              </Row>
+                              <Row
+                                    bsClass="row"
+                                    className="clearfix"
+                                    componentClass="div">
+                                    <Col
+                                          bsClass="col"
+                                          componentClass="div"
+                                          lg={4}
+                                          md={6}
+                                          xs={12}>
+                                          <FieldGroup
+                                                id="formControlsText"
+                                                label="Total Cost"
+                                                onChange={[Function]}
+                                                placekholder="Total Cost"
+                                                type="number"
+                                                value={109.29} />
+                                    </Col>
+                                    <Col
+                                          bsClass="col"
+                                          componentClass="div"
+                                          lg={4}
+                                          md={6}
+                                          xs={12}>
+                                          <FieldGroup
+                                                id="formControlsText"
+                                                label="Total RMB Cost"
+                                                onChange={[Function]}
+                                                placekholder="Total RMB Cost"
+                                                type="number"
+                                                value={519.8} />
+                                    </Col>
+                              </Row>
+                        </Panel>
+                        <Panel
+                              bsClass="panel"
+                              bsStyle="default"
+                              defaultExpanded={false}
+                              eventKey="2"
+                              header="Shipping">
+                              <Row
+                                    bsClass="row"
+                                    className="clearfix"
+                                    componentClass="div">
+                                    <Col
+                                          bsClass="col"
+                                          componentClass="div"
+                                          lg={4}
+                                          md={6}
+                                          xs={12}>
+                                          <FieldGroup
+                                                label="no"
+                                                onChange={[Function]}
+                                                placeholder="no"
+                                                type="text"
+                                                value="EF516295687NZ" />
+                                    </Col>
+                                    <Col
+                                          bsClass="col"
+                                          componentClass="div"
+                                          lg={4}
+                                          md={6}
+                                          xs={12}>
+                                          <FieldGroup
+                                                label="url"
+                                                onChange={[Function]}
+                                                placeholder="url"
+                                                type="text"
+                                                value="http://member.efspost.net/cgi-bin/GInfo.dll?EmmisTrack?cno=EF516295687NZ" />
+                                    </Col>
+                                    <Col
+                                          bsClass="col"
+                                          componentClass="div"
+                                          lg={4}
+                                          md={6}
+                                          xs={12}>
+                                          <FormGroup
+                                                bsClass="form-group"
+                                                controlId="formControlsTextarea">
+                                                <ControlLabel
+                                                      bsClass="control-label"
+                                                      srOnly={false}>
+                                                      Items
+                                                </ControlLabel>
+                                                <FormControl
+                                                      bsClass="form-control"
+                                                      componentClass="textarea"
+                                                      onChange={[Function]}
+                                                      placeholder="textarea"
+                                                      value="" />
+                                          </FormGroup>
+                                    </Col>
+                                    <Col
+                                          bsClass="col"
+                                          componentClass="div"
+                                          lg={4}
+                                          md={6}
+                                          xs={12}>
+                                          <FieldGroup
+                                                label="status"
+                                                onChange={[Function]}
+                                                placeholder="status"
+                                                type="text"
+                                                value="Signed" />
+                                    </Col>
+                              </Row>
+                              <Row
+                                    bsClass="row"
+                                    className="clearfix"
+                                    componentClass="div">
+                                    <Col
+                                          bsClass="col"
+                                          componentClass="div"
+                                          lg={4}
+                                          md={6}
+                                          xs={12}>
+                                          <FieldGroup
+                                                label="no"
+                                                onChange={[Function]}
+                                                placeholder="no"
+                                                type="text"
+                                                value="EF516295688NZ" />
+                                    </Col>
+                                    <Col
+                                          bsClass="col"
+                                          componentClass="div"
+                                          lg={4}
+                                          md={6}
+                                          xs={12}>
+                                          <FieldGroup
+                                                label="url"
+                                                onChange={[Function]}
+                                                placeholder="url"
+                                                type="text"
+                                                value="http://member.efspost.net/cgi-bin/GInfo.dll?EmmisTrack?cno=EF516295688NZ" />
+                                    </Col>
+                                    <Col
+                                          bsClass="col"
+                                          componentClass="div"
+                                          lg={4}
+                                          md={6}
+                                          xs={12}>
+                                          <FormGroup
+                                                bsClass="form-group"
+                                                controlId="formControlsTextarea">
+                                                <ControlLabel
+                                                      bsClass="control-label"
+                                                      srOnly={false}>
+                                                      Items
+                                                </ControlLabel>
+                                                <FormControl
+                                                      bsClass="form-control"
+                                                      componentClass="textarea"
+                                                      onChange={[Function]}
+                                                      placeholder="textarea"
+                                                      value="" />
+                                          </FormGroup>
+                                    </Col>
+                                    <Col
+                                          bsClass="col"
+                                          componentClass="div"
+                                          lg={4}
+                                          md={6}
+                                          xs={12}>
+                                          <FieldGroup
+                                                label="status"
+                                                onChange={[Function]}
+                                                placeholder="status"
+                                                type="text"
+                                                value="Signed" />
+                                    </Col>
+                              </Row>
+                        </Panel>
+                        <Panel
+                              bsClass="panel"
+                              bsStyle="default"
+                              defaultExpanded={false}
+                              eventKey="3"
+                              header="Order Item">
+                              <Row
+                                    bsClass="row"
+                                    className="clearfix"
+                                    componentClass="div">
+                                    <Col
+                                          bsClass="col"
+                                          componentClass="div"
+                                          lg={4}
+                                          md={6}
+                                          xs={12}>
+                                          <FieldGroup
+                                                label="name"
+                                                onChange={[Function]}
+                                                placeholder="name"
+                                                type="text"
+                                                value="Bio Island 幼儿童补锌咀嚼片宝宝锌片120粒提高免疫增强食欲" />
+                                    </Col>
+                                    <Col
+                                          bsClass="col"
+                                          componentClass="div"
+                                          lg={4}
+                                          md={6}
+                                          xs={12}>
+                                          <FieldGroup
+                                                label="url"
+                                                onChange={[Function]}
+                                                placeholder="url"
+                                                type="text"
+                                                value="http://www.wellcome.co.nz/product-1877.html" />
+                                    </Col>
+                                    <Col
+                                          bsClass="col"
+                                          componentClass="div"
+                                          lg={4}
+                                          md={6}
+                                          xs={12}>
+                                          <FieldGroup
+                                                label="price"
+                                                onChange={[Function]}
+                                                placeholder="price"
+                                                type="text"
+                                                value={17.85} />
+                                    </Col>
+                                    <Col
+                                          bsClass="col"
+                                          componentClass="div"
+                                          lg={4}
+                                          md={6}
+                                          xs={12}>
+                                          <FieldGroup
+                                                label="quantity"
+                                                onChange={[Function]}
+                                                placeholder="quantity"
+                                                type="text"
+                                                value={1} />
+                                    </Col>
+                                    <Col
+                                          bsClass="col"
+                                          componentClass="div"
+                                          lg={4}
+                                          md={6}
+                                          xs={12}>
+                                          <FieldGroup
+                                                label="subtotal"
+                                                onChange={[Function]}
+                                                placeholder="subtotal"
+                                                type="text"
+                                                value={17.85} />
+                                    </Col>
+                              </Row>
+                              <Row
+                                    bsClass="row"
+                                    className="clearfix"
+                                    componentClass="div">
+                                    <Col
+                                          bsClass="col"
+                                          componentClass="div"
+                                          lg={4}
+                                          md={6}
+                                          xs={12}>
+                                          <FieldGroup
+                                                label="name"
+                                                onChange={[Function]}
+                                                placeholder="name"
+                                                type="text"
+                                                value="SUSTAGEN 医院配方营养粉奶粉 老人孕妇体弱适用 840克 香草味 可直邮回国" />
+                                    </Col>
+                                    <Col
+                                          bsClass="col"
+                                          componentClass="div"
+                                          lg={4}
+                                          md={6}
+                                          xs={12}>
+                                          <FieldGroup
+                                                label="url"
+                                                onChange={[Function]}
+                                                placeholder="url"
+                                                type="text"
+                                                value="http://www.wellcome.co.nz/product-1294.html" />
+                                    </Col>
+                                    <Col
+                                          bsClass="col"
+                                          componentClass="div"
+                                          lg={4}
+                                          md={6}
+                                          xs={12}>
+                                          <FieldGroup
+                                                label="price"
+                                                onChange={[Function]}
+                                                placeholder="price"
+                                                type="text"
+                                                value={25.8} />
+                                    </Col>
+                                    <Col
+                                          bsClass="col"
+                                          componentClass="div"
+                                          lg={4}
+                                          md={6}
+                                          xs={12}>
+                                          <FieldGroup
+                                                label="quantity"
+                                                onChange={[Function]}
+                                                placeholder="quantity"
+                                                type="text"
+                                                value={1} />
+                                    </Col>
+                                    <Col
+                                          bsClass="col"
+                                          componentClass="div"
+                                          lg={4}
+                                          md={6}
+                                          xs={12}>
+                                          <FieldGroup
+                                                label="subtotal"
+                                                onChange={[Function]}
+                                                placeholder="subtotal"
+                                                type="text"
+                                                value={25.8} />
+                                    </Col>
+                              </Row>
+                              <Row
+                                    bsClass="row"
+                                    className="clearfix"
+                                    componentClass="div">
+                                    <Col
+                                          bsClass="col"
+                                          componentClass="div"
+                                          lg={4}
+                                          md={6}
+                                          xs={12}>
+                                          <FieldGroup
+                                                label="name"
+                                                onChange={[Function]}
+                                                placeholder="name"
+                                                type="text"
+                                                value="Ecostore 实木婴儿洗护礼盒 大号七件套" />
+                                    </Col>
+                                    <Col
+                                          bsClass="col"
+                                          componentClass="div"
+                                          lg={4}
+                                          md={6}
+                                          xs={12}>
+                                          <FieldGroup
+                                                label="url"
+                                                onChange={[Function]}
+                                                placeholder="url"
+                                                type="text"
+                                                value="http://www.wellcome.co.nz/product-1759.html" />
+                                    </Col>
+                                    <Col
+                                          bsClass="col"
+                                          componentClass="div"
+                                          lg={4}
+                                          md={6}
+                                          xs={12}>
+                                          <FieldGroup
+                                                label="price"
+                                                onChange={[Function]}
+                                                placeholder="price"
+                                                type="text"
+                                                value={64.64} />
+                                    </Col>
+                                    <Col
+                                          bsClass="col"
+                                          componentClass="div"
+                                          lg={4}
+                                          md={6}
+                                          xs={12}>
+                                          <FieldGroup
+                                                label="quantity"
+                                                onChange={[Function]}
+                                                placeholder="quantity"
+                                                type="text"
+                                                value={1} />
+                                    </Col>
+                                    <Col
+                                          bsClass="col"
+                                          componentClass="div"
+                                          lg={4}
+                                          md={6}
+                                          xs={12}>
+                                          <FieldGroup
+                                                label="subtotal"
+                                                onChange={[Function]}
+                                                placeholder="subtotal"
+                                                type="text"
+                                                value={64.64} />
+                                    </Col>
+                              </Row>
+                        </Panel>
+                        <Panel
+                              bsClass="panel"
+                              bsStyle="default"
+                              defaultExpanded={false}
+                              eventKey="4"
+                              header="Address">
+                              <Row
+                                    bsClass="row"
+                                    className="clearfix"
+                                    componentClass="div">
+                                    <Col
+                                          bsClass="col"
+                                          componentClass="div"
+                                          lg={4}
+                                          md={6}
+                                          xs={12}>
+                                          <FieldGroup
+                                                id="formControlsText"
+                                                label="Name"
+                                                onChange={[Function]}
+                                                placekholder="Name"
+                                                type="text"
+                                                value="张小" />
+                                    </Col>
+                                    <Col
+                                          bsClass="col"
+                                          componentClass="div"
+                                          lg={4}
+                                          md={6}
+                                          xs={12}>
+                                          <FieldGroup
+                                                id="formControlsText"
+                                                label="Tel"
+                                                onChange={[Function]}
+                                                placekholder="Tel"
+                                                type="text"
+                                                value="15801859" />
+                                    </Col>
+                                    <Col
+                                          bsClass="col"
+                                          componentClass="div"
+                                          lg={4}
+                                          md={6}
+                                          xs={12}>
+                                          <FieldGroup
+                                                id="formControlsText"
+                                                label="Zip"
+                                                onChange={[Function]}
+                                                placekholder="Zip"
+                                                type="text"
+                                                value="2000" />
+                                    </Col>
+                                    <Col
+                                          bsClass="col"
+                                          componentClass="div"
+                                          lg={4}
+                                          md={6}
+                                          xs={12}>
+                                          <FieldGroup
+                                                id="formControlsText"
+                                                label="Weight"
+                                                onChange={[Function]}
+                                                placekholder="Weight"
+                                                type="text"
+                                                value={3880} />
+                                    </Col>
+                                    <Col
+                                          bsClass="col"
+                                          componentClass="div"
+                                          lg={4}
+                                          md={6}
+                                          xs={12}>
+                                          <FieldGroup
+                                                id="formControlsText"
+                                                label="Address"
+                                                onChange={[Function]}
+                                                placekholder="Address"
+                                                type="text"
+                                                value="中国上海市杨浦区控1" />
+                                    </Col>
+                              </Row>
+                        </Panel>
+                  </PanelGroup>
+            </ModalBody>
+            <ModalFooter
+                  bsClass="modal-footer"
+                  componentClass="div">
+                  <Button
+                        active={false}
+                        block={false}
+                        bsClass="btn"
+                        bsStyle="default"
+                        disabled={false}
+                        onClick={undefined}>
+                        Update
+                  </Button>
+                  <Button
+                        active={false}
+                        block={false}
+                        bsClass="btn"
+                        bsStyle="default"
+                        disabled={false}
+                        onClick={undefined}>
+                        Close
+                  </Button>
+            </ModalFooter>
+      </Modal>
+</div>,
+  ],
+  "options": Object {},
+  "renderer": ReactShallowRenderer {
+    "_instance": ShallowComponentWrapper {
+      "_calledComponentWillUnmount": false,
+      "_compositeType": 1,
+      "_context": Object {},
+      "_currentElement": <OrderDetail
+        order={
+                Object {
+                        "_id": "5912937e07835c3ea03186e7",
+                        "address": Object {
+                          "address": "中国上海市杨浦区控1",
+                          "name": "张小",
+                          "tel": "15801859",
+                          "weight": 3880,
+                          "zip": "2000",
+                        },
+                        "created": "2017-05-17T00:00:00.000Z",
+                        "items": Array [
+                          Object {
+                            "name": "Bio Island 幼儿童补锌咀嚼片宝宝锌片120粒提高免疫增强食欲",
+                            "price": 17.85,
+                            "quantity": 1,
+                            "subtotal": 17.85,
+                            "url": "http://www.wellcome.co.nz/product-1877.html",
+                          },
+                          Object {
+                            "name": "SUSTAGEN 医院配方营养粉奶粉 老人孕妇体弱适用 840克 香草味 可直邮回国",
+                            "price": 25.8,
+                            "quantity": 1,
+                            "subtotal": 25.8,
+                            "url": "http://www.wellcome.co.nz/product-1294.html",
+                          },
+                          Object {
+                            "name": "Ecostore 实木婴儿洗护礼盒 大号七件套",
+                            "price": 64.64,
+                            "quantity": 1,
+                            "subtotal": 64.64,
+                            "url": "http://www.wellcome.co.nz/product-1759.html",
+                          },
+                        ],
+                        "orderId": "20160703202175",
+                        "shipping": Array [
+                          Object {
+                            "no": "EF516295687NZ",
+                            "status": "Signed",
+                            "url": "http://member.efspost.net/cgi-bin/GInfo.dll?EmmisTrack?cno=EF516295687NZ",
+                          },
+                          Object {
+                            "no": "EF516295688NZ",
+                            "status": "Signed",
+                            "url": "http://member.efspost.net/cgi-bin/GInfo.dll?EmmisTrack?cno=EF516295688NZ",
+                          },
+                        ],
+                        "status": "Customers",
+                        "subtotal": 110.29,
+                        "totalCost": 109.29,
+                        "totalRmbCost": 519.8,
+                      }
+        } />,
+      "_debugID": 5,
+      "_hostContainerInfo": null,
+      "_hostParent": null,
+      "_instance": OrderDetail {
+        "_reactInternalInstance": [Circular],
+        "changeAddressAddress": [Function],
+        "changeAddressName": [Function],
+        "changeAddressTel": [Function],
+        "changeAddressWeight": [Function],
+        "changeAddressZip": [Function],
+        "changeCreatedDate": [Function],
+        "changeItemName": [Function],
+        "changeItemPrice": [Function],
+        "changeItemQuantity": [Function],
+        "changeItemSubtotal": [Function],
+        "changeItemUrl": [Function],
+        "changeShippingItems": [Function],
+        "changeShippingNo": [Function],
+        "changeShippingStatus": [Function],
+        "changeShippingUrl": [Function],
+        "changeStatus": [Function],
+        "changeSubtotal": [Function],
+        "changeTotalCost": [Function],
+        "changeTotalRmbCost": [Function],
+        "context": Object {},
+        "props": Object {
+          "order": Object {
+            "_id": "5912937e07835c3ea03186e7",
+            "address": Object {
+              "address": "中国上海市杨浦区控1",
+              "name": "张小",
+              "tel": "15801859",
+              "weight": 3880,
+              "zip": "2000",
+            },
+            "created": "2017-05-17T00:00:00.000Z",
+            "items": Array [
+              Object {
+                "name": "Bio Island 幼儿童补锌咀嚼片宝宝锌片120粒提高免疫增强食欲",
+                "price": 17.85,
+                "quantity": 1,
+                "subtotal": 17.85,
+                "url": "http://www.wellcome.co.nz/product-1877.html",
+              },
+              Object {
+                "name": "SUSTAGEN 医院配方营养粉奶粉 老人孕妇体弱适用 840克 香草味 可直邮回国",
+                "price": 25.8,
+                "quantity": 1,
+                "subtotal": 25.8,
+                "url": "http://www.wellcome.co.nz/product-1294.html",
+              },
+              Object {
+                "name": "Ecostore 实木婴儿洗护礼盒 大号七件套",
+                "price": 64.64,
+                "quantity": 1,
+                "subtotal": 64.64,
+                "url": "http://www.wellcome.co.nz/product-1759.html",
+              },
+            ],
+            "orderId": "20160703202175",
+            "shipping": Array [
+              Object {
+                "no": "EF516295687NZ",
+                "status": "Signed",
+                "url": "http://member.efspost.net/cgi-bin/GInfo.dll?EmmisTrack?cno=EF516295687NZ",
+              },
+              Object {
+                "no": "EF516295688NZ",
+                "status": "Signed",
+                "url": "http://member.efspost.net/cgi-bin/GInfo.dll?EmmisTrack?cno=EF516295688NZ",
+              },
+            ],
+            "status": "Customers",
+            "subtotal": 110.29,
+            "totalCost": 109.29,
+            "totalRmbCost": 519.8,
+          },
+        },
+        "refs": Object {},
+        "state": null,
+        "updater": Object {
+          "enqueueCallback": [Function],
+          "enqueueCallbackInternal": [Function],
+          "enqueueElementInternal": [Function],
+          "enqueueForceUpdate": [Function],
+          "enqueueReplaceState": [Function],
+          "enqueueSetState": [Function],
+          "isMounted": [Function],
+          "validateCallback": [Function],
+        },
+      },
+      "_mountOrder": 3,
+      "_pendingCallbacks": null,
+      "_pendingElement": null,
+      "_pendingForceUpdate": false,
+      "_pendingReplaceState": false,
+      "_pendingStateQueue": null,
+      "_renderedComponent": NoopInternalComponent {
+        "_currentElement": <div>
+          <Modal
+                    animation={true}
+                    autoFocus={true}
+                    backdrop={true}
+                    bsClass="modal"
+                    bsSize="lg"
+                    dialogComponentClass={[Function]}
+                    enforceFocus={true}
+                    keyboard={true}
+                    manager={
+                              ModalManager {
+                                        "containers": Array [],
+                                        "data": Array [],
+                                        "handleContainerOverflow": true,
+                                        "hideSiblingNodes": true,
+                                        "modals": Array [],
+                                      }
+                    }
+                    onHide={[Function]}
+                    renderBackdrop={[Function]}
+                    restoreFocus={true}
+                    show={false}>
+                    <ModalHeader
+                              aria-label="Close"
+                              bsClass="modal-header"
+                              closeButton={true}>
+                              <ModalTitle
+                                        bsClass="modal-title"
+                                        componentClass="h4">
+                                        Order Id: 
+                                        20160703202175
+                              </ModalTitle>
+                    </ModalHeader>
+                    <ModalBody
+                              bsClass="modal-body"
+                              componentClass="div">
+                              <PanelGroup
+                                        accordion={true}
+                                        bsClass="panel-group"
+                                        defaultActiveKey="1">
+                                        <Panel
+                                                  bsClass="panel"
+                                                  bsStyle="default"
+                                                  defaultExpanded={false}
+                                                  eventKey="1"
+                                                  expanded={true}
+                                                  header="General">
+                                                  <Row
+                                                            bsClass="row"
+                                                            className="clearfix"
+                                                            componentClass="div">
+                                                            <Col
+                                                                      bsClass="col"
+                                                                      componentClass="div"
+                                                                      lg={4}
+                                                                      md={6}
+                                                                      xs={12}>
+                                                                      <FieldGroup
+                                                                                id="formControlsText"
+                                                                                label="Sub Total"
+                                                                                onChange={[Function]}
+                                                                                placekholder="sub total"
+                                                                                type="number"
+                                                                                value={110.29} />
+                                                            </Col>
+                                                            <Col
+                                                                      bsClass="col"
+                                                                      componentClass="div"
+                                                                      lg={4}
+                                                                      md={6}
+                                                                      xs={12}>
+                                                                      <FormGroup
+                                                                                bsClass="form-group"
+                                                                                controlId="formControlsText">
+                                                                                <ControlLabel
+                                                                                          bsClass="control-label"
+                                                                                          srOnly={false}>
+                                                                                          Created
+                                                                                </ControlLabel>
+                                                                                <DatePicker
+                                                                                          autoComplete="on"
+                                                                                          autoFocus={false}
+                                                                                          calendarPlacement="bottom"
+                                                                                          cellPadding="5px"
+                                                                                          clearButtonElement="×"
+                                                                                          dateFormat="MM/DD/YYYY"
+                                                                                          dayLabels={
+                                                                                                    Array [
+                                                                                                              "Sun",
+                                                                                                              "Mon",
+                                                                                                              "Tue",
+                                                                                                              "Wed",
+                                                                                                              "Thu",
+                                                                                                              "Fri",
+                                                                                                              "Sat",
+                                                                                                            ]
+                                                                                          }
+                                                                                          disabled={false}
+                                                                                          id="example-datepicker"
+                                                                                          instanceCount={0}
+                                                                                          monthLabels={
+                                                                                                    Array [
+                                                                                                              "January",
+                                                                                                              "February",
+                                                                                                              "March",
+                                                                                                              "April",
+                                                                                                              "May",
+                                                                                                              "June",
+                                                                                                              "July",
+                                                                                                              "August",
+                                                                                                              "September",
+                                                                                                              "October",
+                                                                                                              "November",
+                                                                                                              "December",
+                                                                                                            ]
+                                                                                          }
+                                                                                          nextButtonElement=">"
+                                                                                          onChange={[Function]}
+                                                                                          previousButtonElement="<"
+                                                                                          roundedCorners={false}
+                                                                                          showClearButton={true}
+                                                                                          showTodayButton={false}
+                                                                                          style={
+                                                                                                    Object {
+                                                                                                              "width": "100%",
+                                                                                                            }
+                                                                                          }
+                                                                                          todayButtonLabel="Today"
+                                                                                          value="2017-05-17T00:00:00.000Z" />
+                                                                      </FormGroup>
+                                                            </Col>
+                                                            <Col
+                                                                      bsClass="col"
+                                                                      componentClass="div"
+                                                                      lg={4}
+                                                                      md={6}
+                                                                      xs={12}>
+                                                                      <FormGroup
+                                                                                bsClass="form-group"
+                                                                                controlId="formControlsSelect">
+                                                                                <ControlLabel
+                                                                                          bsClass="control-label"
+                                                                                          srOnly={false}>
+                                                                                          Status
+                                                                                </ControlLabel>
+                                                                                <FormControl
+                                                                                          bsClass="form-control"
+                                                                                          componentClass="select"
+                                                                                          onChange={[Function]}
+                                                                                          placeholder="Status"
+                                                                                          value="Customers">
+                                                                                          <option
+                                                                                                    value="">
+                                                                                                    --Choose one--
+                                                                                          </option>
+                                                                                          <option
+                                                                                                    value="Submitted">
+                                                                                                    Submitted
+                                                                                          </option>
+                                                                                          <option
+                                                                                                    value="Delivery">
+                                                                                                    Delivery
+                                                                                          </option>
+                                                                                          <option
+                                                                                                    value="Customers">
+                                                                                                    Customers
+                                                                                          </option>
+                                                                                          <option
+                                                                                                    value="DeliveryL">
+                                                                                                    DeliveryL
+                                                                                          </option>
+                                                                                          <option
+                                                                                                    value="Signed">
+                                                                                                    Signed
+                                                                                          </option>
+                                                                                </FormControl>
+                                                                      </FormGroup>
+                                                            </Col>
+                                                  </Row>
+                                                  <Row
+                                                            bsClass="row"
+                                                            className="clearfix"
+                                                            componentClass="div">
+                                                            <Col
+                                                                      bsClass="col"
+                                                                      componentClass="div"
+                                                                      lg={4}
+                                                                      md={6}
+                                                                      xs={12}>
+                                                                      <FieldGroup
+                                                                                id="formControlsText"
+                                                                                label="Total Cost"
+                                                                                onChange={[Function]}
+                                                                                placekholder="Total Cost"
+                                                                                type="number"
+                                                                                value={109.29} />
+                                                            </Col>
+                                                            <Col
+                                                                      bsClass="col"
+                                                                      componentClass="div"
+                                                                      lg={4}
+                                                                      md={6}
+                                                                      xs={12}>
+                                                                      <FieldGroup
+                                                                                id="formControlsText"
+                                                                                label="Total RMB Cost"
+                                                                                onChange={[Function]}
+                                                                                placekholder="Total RMB Cost"
+                                                                                type="number"
+                                                                                value={519.8} />
+                                                            </Col>
+                                                  </Row>
+                                        </Panel>
+                                        <Panel
+                                                  bsClass="panel"
+                                                  bsStyle="default"
+                                                  defaultExpanded={false}
+                                                  eventKey="2"
+                                                  header="Shipping">
+                                                  <Row
+                                                            bsClass="row"
+                                                            className="clearfix"
+                                                            componentClass="div">
+                                                            <Col
+                                                                      bsClass="col"
+                                                                      componentClass="div"
+                                                                      lg={4}
+                                                                      md={6}
+                                                                      xs={12}>
+                                                                      <FieldGroup
+                                                                                label="no"
+                                                                                onChange={[Function]}
+                                                                                placeholder="no"
+                                                                                type="text"
+                                                                                value="EF516295687NZ" />
+                                                            </Col>
+                                                            <Col
+                                                                      bsClass="col"
+                                                                      componentClass="div"
+                                                                      lg={4}
+                                                                      md={6}
+                                                                      xs={12}>
+                                                                      <FieldGroup
+                                                                                label="url"
+                                                                                onChange={[Function]}
+                                                                                placeholder="url"
+                                                                                type="text"
+                                                                                value="http://member.efspost.net/cgi-bin/GInfo.dll?EmmisTrack?cno=EF516295687NZ" />
+                                                            </Col>
+                                                            <Col
+                                                                      bsClass="col"
+                                                                      componentClass="div"
+                                                                      lg={4}
+                                                                      md={6}
+                                                                      xs={12}>
+                                                                      <FormGroup
+                                                                                bsClass="form-group"
+                                                                                controlId="formControlsTextarea">
+                                                                                <ControlLabel
+                                                                                          bsClass="control-label"
+                                                                                          srOnly={false}>
+                                                                                          Items
+                                                                                </ControlLabel>
+                                                                                <FormControl
+                                                                                          bsClass="form-control"
+                                                                                          componentClass="textarea"
+                                                                                          onChange={[Function]}
+                                                                                          placeholder="textarea"
+                                                                                          value="" />
+                                                                      </FormGroup>
+                                                            </Col>
+                                                            <Col
+                                                                      bsClass="col"
+                                                                      componentClass="div"
+                                                                      lg={4}
+                                                                      md={6}
+                                                                      xs={12}>
+                                                                      <FieldGroup
+                                                                                label="status"
+                                                                                onChange={[Function]}
+                                                                                placeholder="status"
+                                                                                type="text"
+                                                                                value="Signed" />
+                                                            </Col>
+                                                  </Row>
+                                                  <Row
+                                                            bsClass="row"
+                                                            className="clearfix"
+                                                            componentClass="div">
+                                                            <Col
+                                                                      bsClass="col"
+                                                                      componentClass="div"
+                                                                      lg={4}
+                                                                      md={6}
+                                                                      xs={12}>
+                                                                      <FieldGroup
+                                                                                label="no"
+                                                                                onChange={[Function]}
+                                                                                placeholder="no"
+                                                                                type="text"
+                                                                                value="EF516295688NZ" />
+                                                            </Col>
+                                                            <Col
+                                                                      bsClass="col"
+                                                                      componentClass="div"
+                                                                      lg={4}
+                                                                      md={6}
+                                                                      xs={12}>
+                                                                      <FieldGroup
+                                                                                label="url"
+                                                                                onChange={[Function]}
+                                                                                placeholder="url"
+                                                                                type="text"
+                                                                                value="http://member.efspost.net/cgi-bin/GInfo.dll?EmmisTrack?cno=EF516295688NZ" />
+                                                            </Col>
+                                                            <Col
+                                                                      bsClass="col"
+                                                                      componentClass="div"
+                                                                      lg={4}
+                                                                      md={6}
+                                                                      xs={12}>
+                                                                      <FormGroup
+                                                                                bsClass="form-group"
+                                                                                controlId="formControlsTextarea">
+                                                                                <ControlLabel
+                                                                                          bsClass="control-label"
+                                                                                          srOnly={false}>
+                                                                                          Items
+                                                                                </ControlLabel>
+                                                                                <FormControl
+                                                                                          bsClass="form-control"
+                                                                                          componentClass="textarea"
+                                                                                          onChange={[Function]}
+                                                                                          placeholder="textarea"
+                                                                                          value="" />
+                                                                      </FormGroup>
+                                                            </Col>
+                                                            <Col
+                                                                      bsClass="col"
+                                                                      componentClass="div"
+                                                                      lg={4}
+                                                                      md={6}
+                                                                      xs={12}>
+                                                                      <FieldGroup
+                                                                                label="status"
+                                                                                onChange={[Function]}
+                                                                                placeholder="status"
+                                                                                type="text"
+                                                                                value="Signed" />
+                                                            </Col>
+                                                  </Row>
+                                        </Panel>
+                                        <Panel
+                                                  bsClass="panel"
+                                                  bsStyle="default"
+                                                  defaultExpanded={false}
+                                                  eventKey="3"
+                                                  header="Order Item">
+                                                  <Row
+                                                            bsClass="row"
+                                                            className="clearfix"
+                                                            componentClass="div">
+                                                            <Col
+                                                                      bsClass="col"
+                                                                      componentClass="div"
+                                                                      lg={4}
+                                                                      md={6}
+                                                                      xs={12}>
+                                                                      <FieldGroup
+                                                                                label="name"
+                                                                                onChange={[Function]}
+                                                                                placeholder="name"
+                                                                                type="text"
+                                                                                value="Bio Island 幼儿童补锌咀嚼片宝宝锌片120粒提高免疫增强食欲" />
+                                                            </Col>
+                                                            <Col
+                                                                      bsClass="col"
+                                                                      componentClass="div"
+                                                                      lg={4}
+                                                                      md={6}
+                                                                      xs={12}>
+                                                                      <FieldGroup
+                                                                                label="url"
+                                                                                onChange={[Function]}
+                                                                                placeholder="url"
+                                                                                type="text"
+                                                                                value="http://www.wellcome.co.nz/product-1877.html" />
+                                                            </Col>
+                                                            <Col
+                                                                      bsClass="col"
+                                                                      componentClass="div"
+                                                                      lg={4}
+                                                                      md={6}
+                                                                      xs={12}>
+                                                                      <FieldGroup
+                                                                                label="price"
+                                                                                onChange={[Function]}
+                                                                                placeholder="price"
+                                                                                type="text"
+                                                                                value={17.85} />
+                                                            </Col>
+                                                            <Col
+                                                                      bsClass="col"
+                                                                      componentClass="div"
+                                                                      lg={4}
+                                                                      md={6}
+                                                                      xs={12}>
+                                                                      <FieldGroup
+                                                                                label="quantity"
+                                                                                onChange={[Function]}
+                                                                                placeholder="quantity"
+                                                                                type="text"
+                                                                                value={1} />
+                                                            </Col>
+                                                            <Col
+                                                                      bsClass="col"
+                                                                      componentClass="div"
+                                                                      lg={4}
+                                                                      md={6}
+                                                                      xs={12}>
+                                                                      <FieldGroup
+                                                                                label="subtotal"
+                                                                                onChange={[Function]}
+                                                                                placeholder="subtotal"
+                                                                                type="text"
+                                                                                value={17.85} />
+                                                            </Col>
+                                                  </Row>
+                                                  <Row
+                                                            bsClass="row"
+                                                            className="clearfix"
+                                                            componentClass="div">
+                                                            <Col
+                                                                      bsClass="col"
+                                                                      componentClass="div"
+                                                                      lg={4}
+                                                                      md={6}
+                                                                      xs={12}>
+                                                                      <FieldGroup
+                                                                                label="name"
+                                                                                onChange={[Function]}
+                                                                                placeholder="name"
+                                                                                type="text"
+                                                                                value="SUSTAGEN 医院配方营养粉奶粉 老人孕妇体弱适用 840克 香草味 可直邮回国" />
+                                                            </Col>
+                                                            <Col
+                                                                      bsClass="col"
+                                                                      componentClass="div"
+                                                                      lg={4}
+                                                                      md={6}
+                                                                      xs={12}>
+                                                                      <FieldGroup
+                                                                                label="url"
+                                                                                onChange={[Function]}
+                                                                                placeholder="url"
+                                                                                type="text"
+                                                                                value="http://www.wellcome.co.nz/product-1294.html" />
+                                                            </Col>
+                                                            <Col
+                                                                      bsClass="col"
+                                                                      componentClass="div"
+                                                                      lg={4}
+                                                                      md={6}
+                                                                      xs={12}>
+                                                                      <FieldGroup
+                                                                                label="price"
+                                                                                onChange={[Function]}
+                                                                                placeholder="price"
+                                                                                type="text"
+                                                                                value={25.8} />
+                                                            </Col>
+                                                            <Col
+                                                                      bsClass="col"
+                                                                      componentClass="div"
+                                                                      lg={4}
+                                                                      md={6}
+                                                                      xs={12}>
+                                                                      <FieldGroup
+                                                                                label="quantity"
+                                                                                onChange={[Function]}
+                                                                                placeholder="quantity"
+                                                                                type="text"
+                                                                                value={1} />
+                                                            </Col>
+                                                            <Col
+                                                                      bsClass="col"
+                                                                      componentClass="div"
+                                                                      lg={4}
+                                                                      md={6}
+                                                                      xs={12}>
+                                                                      <FieldGroup
+                                                                                label="subtotal"
+                                                                                onChange={[Function]}
+                                                                                placeholder="subtotal"
+                                                                                type="text"
+                                                                                value={25.8} />
+                                                            </Col>
+                                                  </Row>
+                                                  <Row
+                                                            bsClass="row"
+                                                            className="clearfix"
+                                                            componentClass="div">
+                                                            <Col
+                                                                      bsClass="col"
+                                                                      componentClass="div"
+                                                                      lg={4}
+                                                                      md={6}
+                                                                      xs={12}>
+                                                                      <FieldGroup
+                                                                                label="name"
+                                                                                onChange={[Function]}
+                                                                                placeholder="name"
+                                                                                type="text"
+                                                                                value="Ecostore 实木婴儿洗护礼盒 大号七件套" />
+                                                            </Col>
+                                                            <Col
+                                                                      bsClass="col"
+                                                                      componentClass="div"
+                                                                      lg={4}
+                                                                      md={6}
+                                                                      xs={12}>
+                                                                      <FieldGroup
+                                                                                label="url"
+                                                                                onChange={[Function]}
+                                                                                placeholder="url"
+                                                                                type="text"
+                                                                                value="http://www.wellcome.co.nz/product-1759.html" />
+                                                            </Col>
+                                                            <Col
+                                                                      bsClass="col"
+                                                                      componentClass="div"
+                                                                      lg={4}
+                                                                      md={6}
+                                                                      xs={12}>
+                                                                      <FieldGroup
+                                                                                label="price"
+                                                                                onChange={[Function]}
+                                                                                placeholder="price"
+                                                                                type="text"
+                                                                                value={64.64} />
+                                                            </Col>
+                                                            <Col
+                                                                      bsClass="col"
+                                                                      componentClass="div"
+                                                                      lg={4}
+                                                                      md={6}
+                                                                      xs={12}>
+                                                                      <FieldGroup
+                                                                                label="quantity"
+                                                                                onChange={[Function]}
+                                                                                placeholder="quantity"
+                                                                                type="text"
+                                                                                value={1} />
+                                                            </Col>
+                                                            <Col
+                                                                      bsClass="col"
+                                                                      componentClass="div"
+                                                                      lg={4}
+                                                                      md={6}
+                                                                      xs={12}>
+                                                                      <FieldGroup
+                                                                                label="subtotal"
+                                                                                onChange={[Function]}
+                                                                                placeholder="subtotal"
+                                                                                type="text"
+                                                                                value={64.64} />
+                                                            </Col>
+                                                  </Row>
+                                        </Panel>
+                                        <Panel
+                                                  bsClass="panel"
+                                                  bsStyle="default"
+                                                  defaultExpanded={false}
+                                                  eventKey="4"
+                                                  header="Address">
+                                                  <Row
+                                                            bsClass="row"
+                                                            className="clearfix"
+                                                            componentClass="div">
+                                                            <Col
+                                                                      bsClass="col"
+                                                                      componentClass="div"
+                                                                      lg={4}
+                                                                      md={6}
+                                                                      xs={12}>
+                                                                      <FieldGroup
+                                                                                id="formControlsText"
+                                                                                label="Name"
+                                                                                onChange={[Function]}
+                                                                                placekholder="Name"
+                                                                                type="text"
+                                                                                value="张小" />
+                                                            </Col>
+                                                            <Col
+                                                                      bsClass="col"
+                                                                      componentClass="div"
+                                                                      lg={4}
+                                                                      md={6}
+                                                                      xs={12}>
+                                                                      <FieldGroup
+                                                                                id="formControlsText"
+                                                                                label="Tel"
+                                                                                onChange={[Function]}
+                                                                                placekholder="Tel"
+                                                                                type="text"
+                                                                                value="15801859" />
+                                                            </Col>
+                                                            <Col
+                                                                      bsClass="col"
+                                                                      componentClass="div"
+                                                                      lg={4}
+                                                                      md={6}
+                                                                      xs={12}>
+                                                                      <FieldGroup
+                                                                                id="formControlsText"
+                                                                                label="Zip"
+                                                                                onChange={[Function]}
+                                                                                placekholder="Zip"
+                                                                                type="text"
+                                                                                value="2000" />
+                                                            </Col>
+                                                            <Col
+                                                                      bsClass="col"
+                                                                      componentClass="div"
+                                                                      lg={4}
+                                                                      md={6}
+                                                                      xs={12}>
+                                                                      <FieldGroup
+                                                                                id="formControlsText"
+                                                                                label="Weight"
+                                                                                onChange={[Function]}
+                                                                                placekholder="Weight"
+                                                                                type="text"
+                                                                                value={3880} />
+                                                            </Col>
+                                                            <Col
+                                                                      bsClass="col"
+                                                                      componentClass="div"
+                                                                      lg={4}
+                                                                      md={6}
+                                                                      xs={12}>
+                                                                      <FieldGroup
+                                                                                id="formControlsText"
+                                                                                label="Address"
+                                                                                onChange={[Function]}
+                                                                                placekholder="Address"
+                                                                                type="text"
+                                                                                value="中国上海市杨浦区控1" />
+                                                            </Col>
+                                                  </Row>
+                                        </Panel>
+                              </PanelGroup>
+                    </ModalBody>
+                    <ModalFooter
+                              bsClass="modal-footer"
+                              componentClass="div">
+                              <Button
+                                        active={false}
+                                        block={false}
+                                        bsClass="btn"
+                                        bsStyle="default"
+                                        disabled={false}
+                                        onClick={undefined}>
+                                        Update
+                              </Button>
+                              <Button
+                                        active={false}
+                                        block={false}
+                                        bsClass="btn"
+                                        bsStyle="default"
+                                        disabled={false}
+                                        onClick={undefined}>
+                                        Close
+                              </Button>
+                    </ModalFooter>
+          </Modal>
+</div>,
+        "_debugID": 6,
+        "_renderedOutput": <div>
+          <Modal
+                    animation={true}
+                    autoFocus={true}
+                    backdrop={true}
+                    bsClass="modal"
+                    bsSize="lg"
+                    dialogComponentClass={[Function]}
+                    enforceFocus={true}
+                    keyboard={true}
+                    manager={
+                              ModalManager {
+                                        "containers": Array [],
+                                        "data": Array [],
+                                        "handleContainerOverflow": true,
+                                        "hideSiblingNodes": true,
+                                        "modals": Array [],
+                                      }
+                    }
+                    onHide={[Function]}
+                    renderBackdrop={[Function]}
+                    restoreFocus={true}
+                    show={false}>
+                    <ModalHeader
+                              aria-label="Close"
+                              bsClass="modal-header"
+                              closeButton={true}>
+                              <ModalTitle
+                                        bsClass="modal-title"
+                                        componentClass="h4">
+                                        Order Id: 
+                                        20160703202175
+                              </ModalTitle>
+                    </ModalHeader>
+                    <ModalBody
+                              bsClass="modal-body"
+                              componentClass="div">
+                              <PanelGroup
+                                        accordion={true}
+                                        bsClass="panel-group"
+                                        defaultActiveKey="1">
+                                        <Panel
+                                                  bsClass="panel"
+                                                  bsStyle="default"
+                                                  defaultExpanded={false}
+                                                  eventKey="1"
+                                                  expanded={true}
+                                                  header="General">
+                                                  <Row
+                                                            bsClass="row"
+                                                            className="clearfix"
+                                                            componentClass="div">
+                                                            <Col
+                                                                      bsClass="col"
+                                                                      componentClass="div"
+                                                                      lg={4}
+                                                                      md={6}
+                                                                      xs={12}>
+                                                                      <FieldGroup
+                                                                                id="formControlsText"
+                                                                                label="Sub Total"
+                                                                                onChange={[Function]}
+                                                                                placekholder="sub total"
+                                                                                type="number"
+                                                                                value={110.29} />
+                                                            </Col>
+                                                            <Col
+                                                                      bsClass="col"
+                                                                      componentClass="div"
+                                                                      lg={4}
+                                                                      md={6}
+                                                                      xs={12}>
+                                                                      <FormGroup
+                                                                                bsClass="form-group"
+                                                                                controlId="formControlsText">
+                                                                                <ControlLabel
+                                                                                          bsClass="control-label"
+                                                                                          srOnly={false}>
+                                                                                          Created
+                                                                                </ControlLabel>
+                                                                                <DatePicker
+                                                                                          autoComplete="on"
+                                                                                          autoFocus={false}
+                                                                                          calendarPlacement="bottom"
+                                                                                          cellPadding="5px"
+                                                                                          clearButtonElement="×"
+                                                                                          dateFormat="MM/DD/YYYY"
+                                                                                          dayLabels={
+                                                                                                    Array [
+                                                                                                              "Sun",
+                                                                                                              "Mon",
+                                                                                                              "Tue",
+                                                                                                              "Wed",
+                                                                                                              "Thu",
+                                                                                                              "Fri",
+                                                                                                              "Sat",
+                                                                                                            ]
+                                                                                          }
+                                                                                          disabled={false}
+                                                                                          id="example-datepicker"
+                                                                                          instanceCount={0}
+                                                                                          monthLabels={
+                                                                                                    Array [
+                                                                                                              "January",
+                                                                                                              "February",
+                                                                                                              "March",
+                                                                                                              "April",
+                                                                                                              "May",
+                                                                                                              "June",
+                                                                                                              "July",
+                                                                                                              "August",
+                                                                                                              "September",
+                                                                                                              "October",
+                                                                                                              "November",
+                                                                                                              "December",
+                                                                                                            ]
+                                                                                          }
+                                                                                          nextButtonElement=">"
+                                                                                          onChange={[Function]}
+                                                                                          previousButtonElement="<"
+                                                                                          roundedCorners={false}
+                                                                                          showClearButton={true}
+                                                                                          showTodayButton={false}
+                                                                                          style={
+                                                                                                    Object {
+                                                                                                              "width": "100%",
+                                                                                                            }
+                                                                                          }
+                                                                                          todayButtonLabel="Today"
+                                                                                          value="2017-05-17T00:00:00.000Z" />
+                                                                      </FormGroup>
+                                                            </Col>
+                                                            <Col
+                                                                      bsClass="col"
+                                                                      componentClass="div"
+                                                                      lg={4}
+                                                                      md={6}
+                                                                      xs={12}>
+                                                                      <FormGroup
+                                                                                bsClass="form-group"
+                                                                                controlId="formControlsSelect">
+                                                                                <ControlLabel
+                                                                                          bsClass="control-label"
+                                                                                          srOnly={false}>
+                                                                                          Status
+                                                                                </ControlLabel>
+                                                                                <FormControl
+                                                                                          bsClass="form-control"
+                                                                                          componentClass="select"
+                                                                                          onChange={[Function]}
+                                                                                          placeholder="Status"
+                                                                                          value="Customers">
+                                                                                          <option
+                                                                                                    value="">
+                                                                                                    --Choose one--
+                                                                                          </option>
+                                                                                          <option
+                                                                                                    value="Submitted">
+                                                                                                    Submitted
+                                                                                          </option>
+                                                                                          <option
+                                                                                                    value="Delivery">
+                                                                                                    Delivery
+                                                                                          </option>
+                                                                                          <option
+                                                                                                    value="Customers">
+                                                                                                    Customers
+                                                                                          </option>
+                                                                                          <option
+                                                                                                    value="DeliveryL">
+                                                                                                    DeliveryL
+                                                                                          </option>
+                                                                                          <option
+                                                                                                    value="Signed">
+                                                                                                    Signed
+                                                                                          </option>
+                                                                                </FormControl>
+                                                                      </FormGroup>
+                                                            </Col>
+                                                  </Row>
+                                                  <Row
+                                                            bsClass="row"
+                                                            className="clearfix"
+                                                            componentClass="div">
+                                                            <Col
+                                                                      bsClass="col"
+                                                                      componentClass="div"
+                                                                      lg={4}
+                                                                      md={6}
+                                                                      xs={12}>
+                                                                      <FieldGroup
+                                                                                id="formControlsText"
+                                                                                label="Total Cost"
+                                                                                onChange={[Function]}
+                                                                                placekholder="Total Cost"
+                                                                                type="number"
+                                                                                value={109.29} />
+                                                            </Col>
+                                                            <Col
+                                                                      bsClass="col"
+                                                                      componentClass="div"
+                                                                      lg={4}
+                                                                      md={6}
+                                                                      xs={12}>
+                                                                      <FieldGroup
+                                                                                id="formControlsText"
+                                                                                label="Total RMB Cost"
+                                                                                onChange={[Function]}
+                                                                                placekholder="Total RMB Cost"
+                                                                                type="number"
+                                                                                value={519.8} />
+                                                            </Col>
+                                                  </Row>
+                                        </Panel>
+                                        <Panel
+                                                  bsClass="panel"
+                                                  bsStyle="default"
+                                                  defaultExpanded={false}
+                                                  eventKey="2"
+                                                  header="Shipping">
+                                                  <Row
+                                                            bsClass="row"
+                                                            className="clearfix"
+                                                            componentClass="div">
+                                                            <Col
+                                                                      bsClass="col"
+                                                                      componentClass="div"
+                                                                      lg={4}
+                                                                      md={6}
+                                                                      xs={12}>
+                                                                      <FieldGroup
+                                                                                label="no"
+                                                                                onChange={[Function]}
+                                                                                placeholder="no"
+                                                                                type="text"
+                                                                                value="EF516295687NZ" />
+                                                            </Col>
+                                                            <Col
+                                                                      bsClass="col"
+                                                                      componentClass="div"
+                                                                      lg={4}
+                                                                      md={6}
+                                                                      xs={12}>
+                                                                      <FieldGroup
+                                                                                label="url"
+                                                                                onChange={[Function]}
+                                                                                placeholder="url"
+                                                                                type="text"
+                                                                                value="http://member.efspost.net/cgi-bin/GInfo.dll?EmmisTrack?cno=EF516295687NZ" />
+                                                            </Col>
+                                                            <Col
+                                                                      bsClass="col"
+                                                                      componentClass="div"
+                                                                      lg={4}
+                                                                      md={6}
+                                                                      xs={12}>
+                                                                      <FormGroup
+                                                                                bsClass="form-group"
+                                                                                controlId="formControlsTextarea">
+                                                                                <ControlLabel
+                                                                                          bsClass="control-label"
+                                                                                          srOnly={false}>
+                                                                                          Items
+                                                                                </ControlLabel>
+                                                                                <FormControl
+                                                                                          bsClass="form-control"
+                                                                                          componentClass="textarea"
+                                                                                          onChange={[Function]}
+                                                                                          placeholder="textarea"
+                                                                                          value="" />
+                                                                      </FormGroup>
+                                                            </Col>
+                                                            <Col
+                                                                      bsClass="col"
+                                                                      componentClass="div"
+                                                                      lg={4}
+                                                                      md={6}
+                                                                      xs={12}>
+                                                                      <FieldGroup
+                                                                                label="status"
+                                                                                onChange={[Function]}
+                                                                                placeholder="status"
+                                                                                type="text"
+                                                                                value="Signed" />
+                                                            </Col>
+                                                  </Row>
+                                                  <Row
+                                                            bsClass="row"
+                                                            className="clearfix"
+                                                            componentClass="div">
+                                                            <Col
+                                                                      bsClass="col"
+                                                                      componentClass="div"
+                                                                      lg={4}
+                                                                      md={6}
+                                                                      xs={12}>
+                                                                      <FieldGroup
+                                                                                label="no"
+                                                                                onChange={[Function]}
+                                                                                placeholder="no"
+                                                                                type="text"
+                                                                                value="EF516295688NZ" />
+                                                            </Col>
+                                                            <Col
+                                                                      bsClass="col"
+                                                                      componentClass="div"
+                                                                      lg={4}
+                                                                      md={6}
+                                                                      xs={12}>
+                                                                      <FieldGroup
+                                                                                label="url"
+                                                                                onChange={[Function]}
+                                                                                placeholder="url"
+                                                                                type="text"
+                                                                                value="http://member.efspost.net/cgi-bin/GInfo.dll?EmmisTrack?cno=EF516295688NZ" />
+                                                            </Col>
+                                                            <Col
+                                                                      bsClass="col"
+                                                                      componentClass="div"
+                                                                      lg={4}
+                                                                      md={6}
+                                                                      xs={12}>
+                                                                      <FormGroup
+                                                                                bsClass="form-group"
+                                                                                controlId="formControlsTextarea">
+                                                                                <ControlLabel
+                                                                                          bsClass="control-label"
+                                                                                          srOnly={false}>
+                                                                                          Items
+                                                                                </ControlLabel>
+                                                                                <FormControl
+                                                                                          bsClass="form-control"
+                                                                                          componentClass="textarea"
+                                                                                          onChange={[Function]}
+                                                                                          placeholder="textarea"
+                                                                                          value="" />
+                                                                      </FormGroup>
+                                                            </Col>
+                                                            <Col
+                                                                      bsClass="col"
+                                                                      componentClass="div"
+                                                                      lg={4}
+                                                                      md={6}
+                                                                      xs={12}>
+                                                                      <FieldGroup
+                                                                                label="status"
+                                                                                onChange={[Function]}
+                                                                                placeholder="status"
+                                                                                type="text"
+                                                                                value="Signed" />
+                                                            </Col>
+                                                  </Row>
+                                        </Panel>
+                                        <Panel
+                                                  bsClass="panel"
+                                                  bsStyle="default"
+                                                  defaultExpanded={false}
+                                                  eventKey="3"
+                                                  header="Order Item">
+                                                  <Row
+                                                            bsClass="row"
+                                                            className="clearfix"
+                                                            componentClass="div">
+                                                            <Col
+                                                                      bsClass="col"
+                                                                      componentClass="div"
+                                                                      lg={4}
+                                                                      md={6}
+                                                                      xs={12}>
+                                                                      <FieldGroup
+                                                                                label="name"
+                                                                                onChange={[Function]}
+                                                                                placeholder="name"
+                                                                                type="text"
+                                                                                value="Bio Island 幼儿童补锌咀嚼片宝宝锌片120粒提高免疫增强食欲" />
+                                                            </Col>
+                                                            <Col
+                                                                      bsClass="col"
+                                                                      componentClass="div"
+                                                                      lg={4}
+                                                                      md={6}
+                                                                      xs={12}>
+                                                                      <FieldGroup
+                                                                                label="url"
+                                                                                onChange={[Function]}
+                                                                                placeholder="url"
+                                                                                type="text"
+                                                                                value="http://www.wellcome.co.nz/product-1877.html" />
+                                                            </Col>
+                                                            <Col
+                                                                      bsClass="col"
+                                                                      componentClass="div"
+                                                                      lg={4}
+                                                                      md={6}
+                                                                      xs={12}>
+                                                                      <FieldGroup
+                                                                                label="price"
+                                                                                onChange={[Function]}
+                                                                                placeholder="price"
+                                                                                type="text"
+                                                                                value={17.85} />
+                                                            </Col>
+                                                            <Col
+                                                                      bsClass="col"
+                                                                      componentClass="div"
+                                                                      lg={4}
+                                                                      md={6}
+                                                                      xs={12}>
+                                                                      <FieldGroup
+                                                                                label="quantity"
+                                                                                onChange={[Function]}
+                                                                                placeholder="quantity"
+                                                                                type="text"
+                                                                                value={1} />
+                                                            </Col>
+                                                            <Col
+                                                                      bsClass="col"
+                                                                      componentClass="div"
+                                                                      lg={4}
+                                                                      md={6}
+                                                                      xs={12}>
+                                                                      <FieldGroup
+                                                                                label="subtotal"
+                                                                                onChange={[Function]}
+                                                                                placeholder="subtotal"
+                                                                                type="text"
+                                                                                value={17.85} />
+                                                            </Col>
+                                                  </Row>
+                                                  <Row
+                                                            bsClass="row"
+                                                            className="clearfix"
+                                                            componentClass="div">
+                                                            <Col
+                                                                      bsClass="col"
+                                                                      componentClass="div"
+                                                                      lg={4}
+                                                                      md={6}
+                                                                      xs={12}>
+                                                                      <FieldGroup
+                                                                                label="name"
+                                                                                onChange={[Function]}
+                                                                                placeholder="name"
+                                                                                type="text"
+                                                                                value="SUSTAGEN 医院配方营养粉奶粉 老人孕妇体弱适用 840克 香草味 可直邮回国" />
+                                                            </Col>
+                                                            <Col
+                                                                      bsClass="col"
+                                                                      componentClass="div"
+                                                                      lg={4}
+                                                                      md={6}
+                                                                      xs={12}>
+                                                                      <FieldGroup
+                                                                                label="url"
+                                                                                onChange={[Function]}
+                                                                                placeholder="url"
+                                                                                type="text"
+                                                                                value="http://www.wellcome.co.nz/product-1294.html" />
+                                                            </Col>
+                                                            <Col
+                                                                      bsClass="col"
+                                                                      componentClass="div"
+                                                                      lg={4}
+                                                                      md={6}
+                                                                      xs={12}>
+                                                                      <FieldGroup
+                                                                                label="price"
+                                                                                onChange={[Function]}
+                                                                                placeholder="price"
+                                                                                type="text"
+                                                                                value={25.8} />
+                                                            </Col>
+                                                            <Col
+                                                                      bsClass="col"
+                                                                      componentClass="div"
+                                                                      lg={4}
+                                                                      md={6}
+                                                                      xs={12}>
+                                                                      <FieldGroup
+                                                                                label="quantity"
+                                                                                onChange={[Function]}
+                                                                                placeholder="quantity"
+                                                                                type="text"
+                                                                                value={1} />
+                                                            </Col>
+                                                            <Col
+                                                                      bsClass="col"
+                                                                      componentClass="div"
+                                                                      lg={4}
+                                                                      md={6}
+                                                                      xs={12}>
+                                                                      <FieldGroup
+                                                                                label="subtotal"
+                                                                                onChange={[Function]}
+                                                                                placeholder="subtotal"
+                                                                                type="text"
+                                                                                value={25.8} />
+                                                            </Col>
+                                                  </Row>
+                                                  <Row
+                                                            bsClass="row"
+                                                            className="clearfix"
+                                                            componentClass="div">
+                                                            <Col
+                                                                      bsClass="col"
+                                                                      componentClass="div"
+                                                                      lg={4}
+                                                                      md={6}
+                                                                      xs={12}>
+                                                                      <FieldGroup
+                                                                                label="name"
+                                                                                onChange={[Function]}
+                                                                                placeholder="name"
+                                                                                type="text"
+                                                                                value="Ecostore 实木婴儿洗护礼盒 大号七件套" />
+                                                            </Col>
+                                                            <Col
+                                                                      bsClass="col"
+                                                                      componentClass="div"
+                                                                      lg={4}
+                                                                      md={6}
+                                                                      xs={12}>
+                                                                      <FieldGroup
+                                                                                label="url"
+                                                                                onChange={[Function]}
+                                                                                placeholder="url"
+                                                                                type="text"
+                                                                                value="http://www.wellcome.co.nz/product-1759.html" />
+                                                            </Col>
+                                                            <Col
+                                                                      bsClass="col"
+                                                                      componentClass="div"
+                                                                      lg={4}
+                                                                      md={6}
+                                                                      xs={12}>
+                                                                      <FieldGroup
+                                                                                label="price"
+                                                                                onChange={[Function]}
+                                                                                placeholder="price"
+                                                                                type="text"
+                                                                                value={64.64} />
+                                                            </Col>
+                                                            <Col
+                                                                      bsClass="col"
+                                                                      componentClass="div"
+                                                                      lg={4}
+                                                                      md={6}
+                                                                      xs={12}>
+                                                                      <FieldGroup
+                                                                                label="quantity"
+                                                                                onChange={[Function]}
+                                                                                placeholder="quantity"
+                                                                                type="text"
+                                                                                value={1} />
+                                                            </Col>
+                                                            <Col
+                                                                      bsClass="col"
+                                                                      componentClass="div"
+                                                                      lg={4}
+                                                                      md={6}
+                                                                      xs={12}>
+                                                                      <FieldGroup
+                                                                                label="subtotal"
+                                                                                onChange={[Function]}
+                                                                                placeholder="subtotal"
+                                                                                type="text"
+                                                                                value={64.64} />
+                                                            </Col>
+                                                  </Row>
+                                        </Panel>
+                                        <Panel
+                                                  bsClass="panel"
+                                                  bsStyle="default"
+                                                  defaultExpanded={false}
+                                                  eventKey="4"
+                                                  header="Address">
+                                                  <Row
+                                                            bsClass="row"
+                                                            className="clearfix"
+                                                            componentClass="div">
+                                                            <Col
+                                                                      bsClass="col"
+                                                                      componentClass="div"
+                                                                      lg={4}
+                                                                      md={6}
+                                                                      xs={12}>
+                                                                      <FieldGroup
+                                                                                id="formControlsText"
+                                                                                label="Name"
+                                                                                onChange={[Function]}
+                                                                                placekholder="Name"
+                                                                                type="text"
+                                                                                value="张小" />
+                                                            </Col>
+                                                            <Col
+                                                                      bsClass="col"
+                                                                      componentClass="div"
+                                                                      lg={4}
+                                                                      md={6}
+                                                                      xs={12}>
+                                                                      <FieldGroup
+                                                                                id="formControlsText"
+                                                                                label="Tel"
+                                                                                onChange={[Function]}
+                                                                                placekholder="Tel"
+                                                                                type="text"
+                                                                                value="15801859" />
+                                                            </Col>
+                                                            <Col
+                                                                      bsClass="col"
+                                                                      componentClass="div"
+                                                                      lg={4}
+                                                                      md={6}
+                                                                      xs={12}>
+                                                                      <FieldGroup
+                                                                                id="formControlsText"
+                                                                                label="Zip"
+                                                                                onChange={[Function]}
+                                                                                placekholder="Zip"
+                                                                                type="text"
+                                                                                value="2000" />
+                                                            </Col>
+                                                            <Col
+                                                                      bsClass="col"
+                                                                      componentClass="div"
+                                                                      lg={4}
+                                                                      md={6}
+                                                                      xs={12}>
+                                                                      <FieldGroup
+                                                                                id="formControlsText"
+                                                                                label="Weight"
+                                                                                onChange={[Function]}
+                                                                                placekholder="Weight"
+                                                                                type="text"
+                                                                                value={3880} />
+                                                            </Col>
+                                                            <Col
+                                                                      bsClass="col"
+                                                                      componentClass="div"
+                                                                      lg={4}
+                                                                      md={6}
+                                                                      xs={12}>
+                                                                      <FieldGroup
+                                                                                id="formControlsText"
+                                                                                label="Address"
+                                                                                onChange={[Function]}
+                                                                                placekholder="Address"
+                                                                                type="text"
+                                                                                value="中国上海市杨浦区控1" />
+                                                            </Col>
+                                                  </Row>
+                                        </Panel>
+                              </PanelGroup>
+                    </ModalBody>
+                    <ModalFooter
+                              bsClass="modal-footer"
+                              componentClass="div">
+                              <Button
+                                        active={false}
+                                        block={false}
+                                        bsClass="btn"
+                                        bsStyle="default"
+                                        disabled={false}
+                                        onClick={undefined}>
+                                        Update
+                              </Button>
+                              <Button
+                                        active={false}
+                                        block={false}
+                                        bsClass="btn"
+                                        bsStyle="default"
+                                        disabled={false}
+                                        onClick={undefined}>
+                                        Close
+                              </Button>
+                    </ModalFooter>
+          </Modal>
+</div>,
+      },
+      "_renderedNodeType": 0,
+      "_rootNodeID": 0,
+      "_topLevelWrapper": null,
+      "_updateBatchNumber": null,
+      "_warnedAboutRefsInRender": false,
+    },
+    "getRenderOutput": [Function],
+    "render": [Function],
+  },
+  "root": [Circular],
+  "unrendered": <OrderDetail
+    order={
+        Object {
+            "_id": "5912937e07835c3ea03186e7",
+            "address": Object {
+              "address": "中国上海市杨浦区控1",
+              "name": "张小",
+              "tel": "15801859",
+              "weight": 3880,
+              "zip": "2000",
+            },
+            "created": "2017-05-17T00:00:00.000Z",
+            "items": Array [
+              Object {
+                "name": "Bio Island 幼儿童补锌咀嚼片宝宝锌片120粒提高免疫增强食欲",
+                "price": 17.85,
+                "quantity": 1,
+                "subtotal": 17.85,
+                "url": "http://www.wellcome.co.nz/product-1877.html",
+              },
+              Object {
+                "name": "SUSTAGEN 医院配方营养粉奶粉 老人孕妇体弱适用 840克 香草味 可直邮回国",
+                "price": 25.8,
+                "quantity": 1,
+                "subtotal": 25.8,
+                "url": "http://www.wellcome.co.nz/product-1294.html",
+              },
+              Object {
+                "name": "Ecostore 实木婴儿洗护礼盒 大号七件套",
+                "price": 64.64,
+                "quantity": 1,
+                "subtotal": 64.64,
+                "url": "http://www.wellcome.co.nz/product-1759.html",
+              },
+            ],
+            "orderId": "20160703202175",
+            "shipping": Array [
+              Object {
+                "no": "EF516295687NZ",
+                "status": "Signed",
+                "url": "http://member.efspost.net/cgi-bin/GInfo.dll?EmmisTrack?cno=EF516295687NZ",
+              },
+              Object {
+                "no": "EF516295688NZ",
+                "status": "Signed",
+                "url": "http://member.efspost.net/cgi-bin/GInfo.dll?EmmisTrack?cno=EF516295688NZ",
+              },
+            ],
+            "status": "Customers",
+            "subtotal": 110.29,
+            "totalCost": 109.29,
+            "totalRmbCost": 519.8,
+          }
+    } />,
+}
+`;

@@ -3,10 +3,10 @@ import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
 
 import { makeSelectError, makeSelectLoading } from 'containers/App/selectors';
+import KTable from 'components/KTable';
 import { loadOrders, loadOrder } from './actions';
 import { makeSelectOreders } from './selectors';
 // import KTable from './ktable';
-import KTable from 'components/KTable';
 
 
 export class OrdersPage extends React.Component {
@@ -20,7 +20,7 @@ export class OrdersPage extends React.Component {
     let content;
 
     if (orders) {
-      content = (<KTable items={orders} loadOrder={loadOrder}/>);
+      content = (<KTable items={orders} loadOrder={loadOrder} />);
     } else {
       content = (<div>Loading...</div>);
     }

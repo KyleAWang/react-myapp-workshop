@@ -4,6 +4,7 @@ import { combineReducers } from 'redux-immutable';
 import { LOCATION_CHANGE } from 'react-router-redux';
 import globalReducer from 'containers/App/reducer';
 import ordersReducer from 'containers/OrdersPage/reducer';
+import userReducer from 'containers/LoginPage/reducer';
 
 
 // Initial routing state
@@ -29,6 +30,7 @@ export default function createReducer(asyncReducers, apolloClient) {
     global: globalReducer,
     route: routeReducer,
     orders: ordersReducer,
+    user: userReducer,
     apollo: apolloClient.reducer(),
     ...asyncReducers,
   });
