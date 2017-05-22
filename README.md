@@ -22,7 +22,7 @@ Login module utilizies passport's local strategy.
 Leverage GraphQL on order related api, e.g. query and mutation.
 <br/><br/><br/>
 
-This project is still ongoing. Later will add acl for api's access control. Also need add more tests.
+This project is still ongoing. Later will complete login module and then use 'acl' for api's access control. Also need add more tests.
 
 
 
