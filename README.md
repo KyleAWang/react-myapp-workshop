@@ -13,7 +13,7 @@ Order management adopts two different approaches to implement similar funtionali
 
 1, OrdersApollo component uses Apollo client to deal with data. The fetch policy uses the 'cache-first' strategy.
 
-2, OrdersPage component uses fetch of whatwg-fetch to communicate with node server. Also use sagas to listen events and then invoke proper actions like yielding a call to server.
+2, OrdersPage component fetches data from node server. Also use sagas to listen events and then invoke proper actions like yielding a call to server.
 <br/><br/>
 
 Login module utilizies passport's local strategy. 
