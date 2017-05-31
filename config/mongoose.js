@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 const chalk = require('chalk');
 const path = require('path');
 
-const dburi = 'mongodb://localhost/papp-dev';
+const dburi = 'mongodb://192.168.20.14:27017/papp-dev';
 
 module.exports.connect = function (cb) {
   const db = mongoose.connect(dburi, {}, (err) => {
