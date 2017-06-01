@@ -39,6 +39,7 @@ describe('<OrderDetail />', () => {
     // })
   });
 
+
   describe('mapDispatchToProps', () => {
     describe('onCloseOrder', () => {
       it(' should be injected', () => {

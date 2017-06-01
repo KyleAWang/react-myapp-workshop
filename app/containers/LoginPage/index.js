@@ -100,4 +100,15 @@ const mapStateToProps = createStructuredSelector({
   error: makeSelectError(),
 });
 
+LoginPage.propTypes = {
+  user: React.PropTypes.oneOfType([
+    React.PropTypes.object,
+    React.PropTypes.bool,
+  ]),
+  error: React.PropTypes.oneOfType([
+    React.PropTypes.object,
+    React.PropTypes.bool,
+  ]),
+};
+
 export default connect(mapStateToProps, mapDispatchToProps)(LoginPage);

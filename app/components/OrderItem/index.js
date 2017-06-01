@@ -5,11 +5,19 @@ function OrderItem(props) {
   const item = props.item;
   let content = 'loading...';
   if (item) {
-    content = (
-      <a href={item.url} target="_blank">
-        {item.name},{item.quantity}*{item.price}={item.subtotal}
-      </a>
-        );
+    if (item.url){
+      content = (
+        <a href={item.url} target="_blank">
+          {item.name},{item.quantity}*{item.price}={item.subtotal}
+        </a>
+      );
+    } else {
+      content = (
+        <span>
+          {item.name},{item.quantity}*{item.price}={item.subtotal}
+        </span>
+      )
+    }
   }
   return (
     <div>
