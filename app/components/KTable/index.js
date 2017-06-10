@@ -35,7 +35,7 @@ export default function KTable(props) {
         </td>
         <td><Address address={order.address} /></td>
         <td><Shipping shipping={order.shipping} /></td>
-        <td><div><Button bsSize="xs" bsStyle="link" onClick={loadOrder(order)}>Edit</Button></div>
+        <td><div><Button bsSize="xs" bsStyle="link" onClick={(order) => loadOrder(order)}>Edit</Button></div>
           <div><Button bsSize="xs" bsStyle="link">Delete</Button></div></td>
       </tr>
       ));

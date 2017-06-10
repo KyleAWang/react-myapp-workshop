@@ -11,12 +11,12 @@ const cluster = require('cluster');
 const numCPUs = require('os').cpus().length;
 const MongoStore = require('connect-mongo')(session);
 
+const core = require(path.resolve('server/controllers/core.server.controller'));
 const setup = require('./middlewares/frontendMiddleware');
 const { schema } = require('../data/elegantSchema');
 const logger = require('./logger');
 const mongoose = require('../config/mongoose');
-const config = require('./env/default');
-const core = require(path.resolve('server/controllers/core.server.controller'));
+const config = require('./config/env/default');
 
 const isDev = process.env.NODE_ENV !== 'production';
 const ngrok = (isDev && process.env.ENABLE_TUNNEL) || argv.tunnel ? require('ngrok') : false;
@@ -79,29 +79,29 @@ if (cluster.isMaster){
     });
 
 // get the intended host and port number, use localhost and port 3000 if not provided
-    const customHost = argv.host || process.env.HOST;
-    const host = customHost || null; // Let http.Server use its default IPv6/4 host
-    const prettyHost = customHost || 'localhost';
-
-    const port = argv.port || process.env.PORT || 3000;
+//     const customHost = argv.host || process.env.HOST;
+//     const host = customHost || null; // Let http.Server use its default IPv6/4 host
+//     const prettyHost = customHost || 'localhost';
+//
+//     const port = argv.port || process.env.PORT || 3000;
 
 // Start your app.
-    app.listen(port, host, (err) => {
+    app.listen(config.port, config.host, (err) => {
       if (err) {
         return logger.error(err.message);
       }
 
       // Connect to ngrok in dev mode
       if (ngrok) {
-        ngrok.connect(port, (innerErr, url) => {
+        ngrok.connect(config.port, (innerErr, url) => {
           if (innerErr) {
             return logger.error(innerErr);
           }
 
-          logger.appStarted(port, prettyHost, url);
+          logger.appStarted(config.port, config.prettyHost, url);
         });
       } else {
-        logger.appStarted(port, prettyHost);
+        logger.appStarted(config.port, config.prettyHost);
       }
     });
   });

@@ -2,7 +2,7 @@ import React from 'react';
 import { graphql } from 'react-apollo';
 import { connect } from 'react-redux';
 
-import ORDERS_QUERY from 'containers/graphql/Orders.graphql';
+import ORDERS_QUERY from './graphql/Orders.graphql';
 import KTable from './ktable';
 
 

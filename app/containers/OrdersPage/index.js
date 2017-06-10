@@ -16,11 +16,11 @@ export class OrdersPage extends React.Component {
   }
 
   render() {
-    const { orders } = this.props;
+    const { orders, onLoadOrder } = this.props;
     let content;
 
     if (orders) {
-      content = (<KTable items={orders} loadOrder={loadOrder} />);
+      content = (<KTable items={orders} loadOrder={onLoadOrder} />);
     } else {
       content = (<div>Loading...</div>);
     }
@@ -56,7 +56,7 @@ const mapStateToProps = createStructuredSelector({
 export function mapDispatchToProps(dispatch) {
   return {
     loadOrders: () => dispatch(loadOrders()),
-    loadOrder: (order) => dispatch(loadOrder(order)),
+    onLoadOrder: (order) => dispatch(loadOrder(order)),
   };
 }
 

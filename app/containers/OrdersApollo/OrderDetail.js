@@ -9,9 +9,9 @@ import { closeOrder, updateOrder, submitUpdateForm } from 'containers/OrdersPage
 import { makeSelectOrder, makeSelectShowModal } from 'containers/OrdersPage/selectors';
 import FieldGroup from 'components/FieldGroup';
 import { convertStringToNumber } from 'utils/convertHelper';
-import EDIT_ORDER from 'containers/graphql/EditOrder.graphql';
-import ORDER_FRAGMENT from 'containers/graphql/OrderFragment.graphql';
 import { filter } from 'graphql-anywhere';
+import EDIT_ORDER from './graphql/EditOrder.graphql';
+import ORDER_FRAGMENT from './graphql/OrderFragment.graphql';
 
 
 class OrderDetail extends React.PureComponent {

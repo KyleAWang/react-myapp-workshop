@@ -9,7 +9,7 @@ import { loginError, loginSuccess } from './actions';
 
 
 export function* login() {
-  const requestURL = 'http://localhost:3000/api/auth/signin';
+  const requestURL = '/api/auth/signin';
   const user = yield select(makeSelectUser());
   console.log('string', JSON.stringify(user));
   const optinos = {

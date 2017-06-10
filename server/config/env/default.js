@@ -1,4 +1,5 @@
 'use strict';
+const argv = require('minimist')(process.argv.slice(2));
 
 module.exports = {
   app: {
@@ -6,8 +7,9 @@ module.exports = {
     description: 'My personal daily application',
     keywords: 'daily life'
   },
-  port: process.env.PORT || 3000,
-  host: process.env.HOST || '0.0.0.0',
+  host: argv.host || process.env.HOST || null,
+  prettyHost: argv.host || process.env.HOST || 'localhost',
+  port: argv.port || process.env.PORT || 3000,
   templateEngine: 'jade',
   // Session Cookie settings
   sessionCookie: {

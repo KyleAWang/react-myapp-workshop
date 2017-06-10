@@ -6,7 +6,7 @@ import { loadOrdersSuccess, loadOrdersError, responseError, submitUpdateFormSucc
 import { makeSelectOrder } from './selectors';
 
 export function* getOrders() {
-  const requestURL = 'http://localhost:3000/graphql?query={orders{_id,orderId,created,subtotal,status,totalCost,totalRmbCost,items{name,url,price,quantity,subtotal},address{name,tel,zip,weight,address},shipping{no,url,status}}}';
+  const requestURL = '/graphql?query={orders{_id,orderId,created,subtotal,status,totalCost,totalRmbCost,items{name,url,price,quantity,subtotal},address{name,tel,zip,weight,address},shipping{no,url,status}}}';
 
   try {
     const orders = yield call(request, requestURL);
@@ -27,7 +27,7 @@ export function* ordersData() {
 export function* updateOrder() {
   const order = yield select(makeSelectOrder());
   const ord = JSON.stringify(order);
-  const requestURL = `http://localhost:3000/graphql?mutation{updateOrder(order:${ord}){_id,orderId}}`;
+  const requestURL = `/graphql?mutation{updateOrder(order:${ord}){_id,orderId}}`;
 
   try {
     yield call(request, requestURL);

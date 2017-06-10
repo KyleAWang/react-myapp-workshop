@@ -28,8 +28,10 @@ export function checkStore(store) {
  */
 export function injectAsyncReducer(store, isValid, apolloClient) {
   return function injectReducer(name, asyncReducer) {
+    console.log('****************injectAsyncReducer');
     if (!isValid) checkStore(store);
 
+    console.log('**********injectAsyncReducer1');
     invariant(
             isString(name) && !isEmpty(name) && isFunction(asyncReducer),
             '(app/utils...) injectAsyncReducer: Expected `asyncReducer` to be a reducer function'
@@ -37,6 +39,7 @@ export function injectAsyncReducer(store, isValid, apolloClient) {
 
     if (Reflect.has(store.asyncReducers, name)) return;
 
+    console.log('**************asy reducer:', store.asyncReducers);
     store.asyncReducers[name] = asyncReducer; // eslint-disable-line no-param-reassign
     store.replaceReducer(createReducer(store.asyncReducers, apolloClient));
   };
