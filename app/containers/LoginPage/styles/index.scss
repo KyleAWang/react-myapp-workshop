@@ -1,3 +1,4 @@
+@import "../../App/styles/index";
 .wrapper{
   width: 100%;
   margin-top: 100px;
@@ -5,7 +6,25 @@
 
 .inner_div{
   margin: 0 auto;
-  width: 650px;
+  width: 100%;
   background: #e6e6e6;
   padding: 50px 100px 50px 100px;
+}
+
+@media only screen and (min-width: $phone) {
+  .inner_div {
+    width: 100%
+  }
+}
+
+@media only screen and (min-width: $tablet) {
+  .inner_div {
+    width: 70%;
+  }
+}
+
+@media only screen and (min-width: $desktop){
+  .inner_div {
+    width: 50%;
+  }
 }

@@ -3,7 +3,7 @@ Object {
   "@@redux-saga/IO": true,
   "CALL": Object {
     "args": Array [
-      "http://localhost:3000/graphql?query={orders{_id,orderId,created,subtotal,status,totalCost,totalRmbCost,items{name,url,price,quantity,subtotal},address{name,tel,zip,weight,address},shipping{no,url,status}}}",
+      "/graphql?query={orders{_id,orderId,created,subtotal,status,totalCost,totalRmbCost,items{name,url,price,quantity,subtotal},address{name,tel,zip,weight,address},shipping{no,url,status}}}",
     ],
     "context": null,
     "fn": [Function],
@@ -16,7 +16,7 @@ Object {
   "@@redux-saga/IO": true,
   "CALL": Object {
     "args": Array [
-      "http://localhost:3000/graphql?query={orders{_id,orderId,created,subtotal,status,totalCost,totalRmbCost,items{name,url,price,quantity,subtotal},address{name,tel,zip,weight,address},shipping{no,url,status}}}",
+      "/graphql?query={orders{_id,orderId,created,subtotal,status,totalCost,totalRmbCost,items{name,url,price,quantity,subtotal},address{name,tel,zip,weight,address},shipping{no,url,status}}}",
     ],
     "context": null,
     "fn": [Function],
@@ -39,7 +39,7 @@ Object {
   "@@redux-saga/IO": true,
   "CALL": Object {
     "args": Array [
-      "http://localhost:3000/graphql?mutation{updateOrder(order:{\"_id\":\"5912937e07835c3ea03186e7\",\"orderId\":\"20160703202175\",\"created\":\"2017-05-17T00:00:00.000Z\",\"subtotal\":110.29,\"status\":\"Customers\",\"totalCost\":109.29,\"totalRmbCost\":519.8,\"items\":[{\"name\":\"Bio Island 幼儿童补锌咀嚼片宝宝锌片120粒提高免疫增强食欲\",\"url\":\"http://www.wellcome.co.nz/product-1877.html\",\"price\":17.85,\"quantity\":1,\"subtotal\":17.85},{\"name\":\"SUSTAGEN 医院配方营养粉奶粉 老人孕妇体弱适用 840克 香草味 可直邮回国\",\"url\":\"http://www.wellcome.co.nz/product-1294.html\",\"price\":25.8,\"quantity\":1,\"subtotal\":25.8},{\"name\":\"Ecostore 实木婴儿洗护礼盒 大号七件套\",\"url\":\"http://www.wellcome.co.nz/product-1759.html\",\"price\":64.64,\"quantity\":1,\"subtotal\":64.64}],\"address\":{\"name\":\"张\",\"tel\":\"158018\",\"zip\":\"200093\",\"weight\":3880,\"address\":\"中国上海市杨浦区控江401\"},\"shipping\":[{\"no\":\"EF516295687NZ\",\"url\":\"http://member.efspost.net/cgi-bin/GInfo.dll?EmmisTrack?cno=EF516295687NZ\",\"status\":\"Signed\"},{\"no\":\"EF516295688NZ\",\"url\":\"http://member.efspost.net/cgi-bin/GInfo.dll?EmmisTrack?cno=EF516295688NZ\",\"status\":\"Signed\"}]}){_id,orderId}}",
+      "/graphql?mutation{updateOrder(order:{\"_id\":\"5912937e07835c3ea03186e7\",\"orderId\":\"20160703202175\",\"created\":\"2017-05-17T00:00:00.000Z\",\"subtotal\":110.29,\"status\":\"Customers\",\"totalCost\":109.29,\"totalRmbCost\":519.8,\"items\":[{\"name\":\"Bio Island 幼儿童补锌咀嚼片宝宝锌片120粒提高免疫增强食欲\",\"url\":\"http://www.wellcome.co.nz/product-1877.html\",\"price\":17.85,\"quantity\":1,\"subtotal\":17.85},{\"name\":\"SUSTAGEN 医院配方营养粉奶粉 老人孕妇体弱适用 840克 香草味 可直邮回国\",\"url\":\"http://www.wellcome.co.nz/product-1294.html\",\"price\":25.8,\"quantity\":1,\"subtotal\":25.8},{\"name\":\"Ecostore 实木婴儿洗护礼盒 大号七件套\",\"url\":\"http://www.wellcome.co.nz/product-1759.html\",\"price\":64.64,\"quantity\":1,\"subtotal\":64.64}],\"address\":{\"name\":\"张\",\"tel\":\"158018\",\"zip\":\"200093\",\"weight\":3880,\"address\":\"中国上海市杨浦区控江401\"},\"shipping\":[{\"no\":\"EF516295687NZ\",\"url\":\"http://member.efspost.net/cgi-bin/GInfo.dll?EmmisTrack?cno=EF516295687NZ\",\"status\":\"Signed\"},{\"no\":\"EF516295688NZ\",\"url\":\"http://member.efspost.net/cgi-bin/GInfo.dll?EmmisTrack?cno=EF516295688NZ\",\"status\":\"Signed\"}]}){_id,orderId}}",
     ],
     "context": null,
     "fn": [Function],
@@ -62,7 +62,7 @@ Object {
   "@@redux-saga/IO": true,
   "CALL": Object {
     "args": Array [
-      "http://localhost:3000/graphql?mutation{updateOrder(order:{\"_id\":\"5912937e07835c3ea03186e7\",\"orderId\":\"20160703202175\",\"created\":\"2017-05-17T00:00:00.000Z\",\"subtotal\":110.29,\"status\":\"Customers\",\"totalCost\":109.29,\"totalRmbCost\":519.8,\"items\":[{\"name\":\"Bio Island 幼儿童补锌咀嚼片宝宝锌片120粒提高免疫增强食欲\",\"url\":\"http://www.wellcome.co.nz/product-1877.html\",\"price\":17.85,\"quantity\":1,\"subtotal\":17.85},{\"name\":\"SUSTAGEN 医院配方营养粉奶粉 老人孕妇体弱适用 840克 香草味 可直邮回国\",\"url\":\"http://www.wellcome.co.nz/product-1294.html\",\"price\":25.8,\"quantity\":1,\"subtotal\":25.8},{\"name\":\"Ecostore 实木婴儿洗护礼盒 大号七件套\",\"url\":\"http://www.wellcome.co.nz/product-1759.html\",\"price\":64.64,\"quantity\":1,\"subtotal\":64.64}],\"address\":{\"name\":\"张\",\"tel\":\"158018\",\"zip\":\"200093\",\"weight\":3880,\"address\":\"中国上海市杨浦区控江401\"},\"shipping\":[{\"no\":\"EF516295687NZ\",\"url\":\"http://member.efspost.net/cgi-bin/GInfo.dll?EmmisTrack?cno=EF516295687NZ\",\"status\":\"Signed\"},{\"no\":\"EF516295688NZ\",\"url\":\"http://member.efspost.net/cgi-bin/GInfo.dll?EmmisTrack?cno=EF516295688NZ\",\"status\":\"Signed\"}]}){_id,orderId}}",
+      "/graphql?mutation{updateOrder(order:{\"_id\":\"5912937e07835c3ea03186e7\",\"orderId\":\"20160703202175\",\"created\":\"2017-05-17T00:00:00.000Z\",\"subtotal\":110.29,\"status\":\"Customers\",\"totalCost\":109.29,\"totalRmbCost\":519.8,\"items\":[{\"name\":\"Bio Island 幼儿童补锌咀嚼片宝宝锌片120粒提高免疫增强食欲\",\"url\":\"http://www.wellcome.co.nz/product-1877.html\",\"price\":17.85,\"quantity\":1,\"subtotal\":17.85},{\"name\":\"SUSTAGEN 医院配方营养粉奶粉 老人孕妇体弱适用 840克 香草味 可直邮回国\",\"url\":\"http://www.wellcome.co.nz/product-1294.html\",\"price\":25.8,\"quantity\":1,\"subtotal\":25.8},{\"name\":\"Ecostore 实木婴儿洗护礼盒 大号七件套\",\"url\":\"http://www.wellcome.co.nz/product-1759.html\",\"price\":64.64,\"quantity\":1,\"subtotal\":64.64}],\"address\":{\"name\":\"张\",\"tel\":\"158018\",\"zip\":\"200093\",\"weight\":3880,\"address\":\"中国上海市杨浦区控江401\"},\"shipping\":[{\"no\":\"EF516295687NZ\",\"url\":\"http://member.efspost.net/cgi-bin/GInfo.dll?EmmisTrack?cno=EF516295687NZ\",\"status\":\"Signed\"},{\"no\":\"EF516295688NZ\",\"url\":\"http://member.efspost.net/cgi-bin/GInfo.dll?EmmisTrack?cno=EF516295688NZ\",\"status\":\"Signed\"}]}){_id,orderId}}",
     ],
     "context": null,
     "fn": [Function],

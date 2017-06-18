@@ -12,8 +12,14 @@ const makeSelectError = () => createSelector(
   (userState) => userState.get('error'),
 );
 
+const makeSelectFormErrors = () => createSelector(
+  selectUser,
+  (userState) => userState.get('formErrors'),
+);
+
 export {
   selectUser,
   makeSelectUser,
   makeSelectError,
+  makeSelectFormErrors,
 }
