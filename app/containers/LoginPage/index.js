@@ -12,11 +12,11 @@ import {
 } from 'react-bootstrap';
 import {createStructuredSelector} from 'reselect';
 import {connect} from 'react-redux';
-import { fromJS } from 'immutable';
 
 import './styles/index.scss';
 import {login, updateUser, validateFormError} from './actions';
 import {makeSelectUser, makeSelectError, makeSelectFormErrors} from './selectors';
+import InputGroup from 'components/InputGroup';
 
 export class LoginPage extends React.Component {
 
@@ -37,6 +37,7 @@ export class LoginPage extends React.Component {
   }
 
   onChangeUsername(evt) {
+    console.log('username');
     let newFormErrors = this.props.formErrors;
     if (!evt.target.value) {
       newFormErrors = {
@@ -55,6 +56,7 @@ export class LoginPage extends React.Component {
   }
 
   onChangePassword(evt) {
+    console.log('password');
     let newFormErrors = this.props.formErrors;
     if (!evt.target.value) {
       newFormErrors = {
@@ -113,40 +115,52 @@ export class LoginPage extends React.Component {
     let unError, pError, serverError, unValideState, userNameInputGroup, passwordInputGroup;
     if (formErrors && formErrors.username) {
       userNameInputGroup =(
-        <FormGroup controlId="formLoginUsername" validationState='error'>
-          <ControlLabel>{formErrors.username}</ControlLabel>
-          <FormControl autoFocus ref={'userNameInput'} type="text" placeholder="User Name" value={user.username} onChange={this.onChangeUsername}/>
-        </FormGroup>
+        <InputGroup
+          value={user.username}
+          placeholder="username"
+          controlId="formLoginUsername"
+          error={formErrors.username }
+          handleChange={this.onChangeUsername}
+          label={formErrors.username}
+          type="text"/>
       )
     } else {
       userNameInputGroup = (
-        <FormGroup controlId="formLoginUsername">
-          <FormControl autoFocus ref={'userNameInput'} type="text" placeholder="User Name" value={user.username} onChange={this.onChangeUsername}/>
-        </FormGroup>
+        <InputGroup
+          value={user.username}
+          placeholder="username"
+          controlId="formLoginUsername"
+          handleChange={this.onChangeUsername}
+          type="text"/>
       )
     }
 
 
     if (formErrors && formErrors.password) {
       passwordInputGroup = (
-        <FormGroup controlId="formLoginPassword" validationState='error'>
-          <ControlLabel>{formErrors.password}</ControlLabel>
-          <FormControl autoFocus ref={input => this.passwordInput=input} type="password" placeholder="Password" value={user.password} onChange={this.onChangePassword}/>
-        </FormGroup>
+        <InputGroup
+          value={user.password}
+          placeholder="username"
+          controlId="formLoginPassword"
+          error={formErrors.password }
+          handleChange={this.onChangePassword}
+          label={formErrors.password}
+          type="text"/>
       )
     } else {
       passwordInputGroup = (
-        <FormGroup controlId="formLoginPassword">
-          <FormControl autoFocus ref={input => this.passwordInput=input} type="password" placeholder="Password" value={user.password} onChange={this.onChangePassword}/>
-        </FormGroup>
+        <InputGroup
+          value={user.password}
+          placeholder="password"
+          controlId="formLoginPassword"
+          handleChange={this.onChangePassword}
+          type="text"/>
       )
     }
     const context = (
       <Form onSubmit={this.onClickSumit}>
         {userNameInputGroup}
-
         {passwordInputGroup}
-
         <FormGroup>
           <Checkbox>Remember me</Checkbox>
         </FormGroup>

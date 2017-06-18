@@ -39,7 +39,8 @@ describe('<LoginPage/>', () => {
   it('should submit form when click sign-in button', () => {
     const loginSubmit = renderedComponent.find('#formLoginSubmit');
     loginSubmit.simulate('click');
-    expect(submitSpy).toHaveBeenCalled();
+    console.log(renderedComponent.state());
+    expect(renderedComponent.state().formErrors).not.toBeNull();
   })
 });
 
