@@ -167,8 +167,9 @@ export class LoginPage extends React.Component {
 
     return (
       <div className="wrapper">
-        {serverError}
         <div className="inner_div">
+          <h3 className="title">Login</h3>
+          {serverError}
           {context}
         </div>
       </div>

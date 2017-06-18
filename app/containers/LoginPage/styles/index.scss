@@ -11,6 +11,12 @@
   padding: 50px 100px 50px 100px;
 }
 
+.title {
+  text-align: center;
+  margin-top: 0px;
+  margin-bottom: 40px;
+}
+
 @media only screen and (min-width: $phone) {
   .inner_div {
     width: 100%
