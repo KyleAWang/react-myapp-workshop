@@ -37,7 +37,6 @@ export class LoginPage extends React.Component {
   }
 
   onChangeUsername(evt) {
-    console.log('username');
     let newFormErrors = this.props.formErrors;
     if (!evt.target.value) {
       newFormErrors = {
@@ -56,7 +55,6 @@ export class LoginPage extends React.Component {
   }
 
   onChangePassword(evt) {
-    console.log('password');
     let newFormErrors = this.props.formErrors;
     if (!evt.target.value) {
       newFormErrors = {
@@ -121,7 +119,6 @@ export class LoginPage extends React.Component {
           controlId="formLoginUsername"
           error={formErrors.username }
           handleChange={this.onChangeUsername}
-          label={formErrors.username}
           type="text"/>
       )
     } else {
@@ -144,7 +141,6 @@ export class LoginPage extends React.Component {
           controlId="formLoginPassword"
           error={formErrors.password }
           handleChange={this.onChangePassword}
-          label={formErrors.password}
           type="text"/>
       )
     } else {

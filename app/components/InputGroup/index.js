@@ -13,12 +13,12 @@ import {
 
 function InputGroup(props) {
   let context;
-  const {controlId, error, value, handleChange, placeholder, label, type} = props;
+  const {controlId, error, value, handleChange, placeholder, type} = props;
 
   if (error) {
     context = (
       <FormGroup controlId={controlId} validationState='error'>
-        <ControlLabel>{label}</ControlLabel>
+        <ControlLabel>{error}</ControlLabel>
         <FormControl autoFocus
                      type={type} placeholder={placeholder} value={value}
                      onChange={handleChange}/>
@@ -44,7 +44,6 @@ InputGroup.propTypes = {
   value: React.PropTypes.string,
   handleChange: React.PropTypes.func,
   placeholder: React.PropTypes.string,
-  label: React.PropTypes.string,
   type: React.PropTypes.string,
 };
 
